@@ -10,13 +10,13 @@ module.exports = {
     devtool: 'inline-source-map',
     mode: 'development',
     devServer: {
-        contentBase: path.resolve(__dirname, '../dist'),
+        contentBase: path.resolve(__dirname, '../docs'),
         hot: true,
         historyApiFallback: true,
     },
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, '../dist'),
+        path: path.resolve(__dirname, '../docs'),
         publicPath: '/',
     },
     resolve: { extensions: ['.tsx', '.ts', '.js'] },
@@ -90,7 +90,7 @@ module.exports = {
         ],
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin(['docs']),
         new HtmlWebPackPlugin({
             template: path.resolve(__dirname, '../src/public/', 'index.html'),
             filename: 'index.html',

@@ -1,13 +1,12 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
 const webpack = require('webpack');
 const pcckageConfig = require('../package.json');
 
 
 module.exports = {
-    entry: path.resolve(__dirname, '../front', 'index.js'),
+    entry: path.resolve(__dirname, '../src', 'index.js'),
     devtool: 'inline-source-map',
     mode: 'development',
     devServer: {
@@ -98,9 +97,9 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['docs']),
         new HtmlWebPackPlugin({
-            template: path.resolve(__dirname, '../front/public/', 'index.html'),
+            template: path.resolve(__dirname, '../src/public/', 'index.html'),
             filename: 'index.html',
-            favicon: path.resolve(__dirname, '../front/public/', 'favicon.ico'),
+            favicon: path.resolve(__dirname, '../src/public/', 'favicon.ico'),
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.ProvidePlugin({
@@ -113,7 +112,6 @@ module.exports = {
             'process.env.VERSION': JSON.stringify(pcckageConfig.version),
             //
         }),
-        new Dotenv(),
         // new webpack.DefinePlugin({
         //     'process.env.NEPTUNE_DEV_HOST': JSON.stringify(process.env.NEPTUNE_DEV_HOST),
         //     'process.env.NEPTUNE_PROD_HOST': JSON.stringify(process.env.NEPTUNE_PROD_HOST),
