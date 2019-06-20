@@ -6,9 +6,6 @@ node_modules
 \.idea/inspectionProfiles/
 
 \.idea/
-docs/
-cloud_sql_proxy.exe
-.env
 
 server/\.DS_Store
 
