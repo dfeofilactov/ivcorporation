@@ -1,0 +1,68 @@
+.page {
+    display: none;
+    background: #f7f8f6;
+    min-height: 200px;
+    margin: 0;
+    /*opacity: 0;*/
+    padding: 0;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    overflow: hidden;
+    /*-webkit-transition: all 1s ease;*/
+    /*-moz-transition: all 1s ease;*/
+    /*-ms-transition: all 1s ease;*/
+    /*-o-transition: all 1s ease;*/
+    /*transition: all 1s ease;*/
+}
+
+/*.content {*/
+    /*opacity: 1;*/
+    /*-webkit-transition: all 1s ease;*/
+    /*-moz-transition: all 1s ease;*/
+    /*-ms-transition: all 1s ease;*/
+    /*-o-transition: all 1s ease;*/
+    /*transition: all 1s ease;*/
+/*}*/
+
+.page h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.page h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.page h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#page-background {
+    display: block;
+    position: fixed;
+    width: 40%;
+    left: -20px;
+    bottom: -20px;
+    opacity: 0.1;
+    z-index: 100;
+}
+
+.container-page {
+    display: block;
+    height: 100%;
+    width: 850px;
+    margin: 0 auto;
+    padding: 0;
+    z-index: 102;
+}
+
+#page-head {
+    display: none;
+    transition: all 1s ease;
+}

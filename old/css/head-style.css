@@ -1,0 +1,170 @@
+header{
+    position: absolute;
+    z-index: 999;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 0 100px #404040;
+}
+
+header .containerHead {
+    padding: 11px 18.5%;
+    background: #ececec;
+    height: 88px;
+    width: 100%;
+    z-index: 980;
+}
+
+header #head-info {
+    height: 66px;
+    float: left;
+    line-height: 20px;
+    padding-left: 28px;
+    padding-top: 12px;
+    border-left: 1.5px solid #e71a23;
+    cursor: default;
+}
+
+header .clear {
+    clear: both;
+}
+
+header .place{
+    height: 100%;
+    float: right;
+    padding-left: 28px;
+}
+header .place p{
+    margin: 15px 0 0;
+}
+
+
+header .lng-container {
+    z-index: 202;
+    display: block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 70px;
+    top: 60px;
+    right: 100px;
+}
+
+header .lng-button {
+    display: block;
+    /*color: #3c3e40;*/
+    float: left;
+    width: 35px;
+    height: 22px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+header .active-lng {
+    /*color: #d71921;*/
+    color: #f1f2f0;
+    background: #d71921;
+}
+
+#ua {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#ru {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+header .lng-button:last-child {
+    border-left: 1px solid #d71921;
+}
+
+/*header .lng-button:hover {*/
+    /*color: #d71921;*/
+/*}*/
+
+header .logo {
+    float: left;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+header h1{
+    margin-right: 20px;
+    float: left;
+}
+
+#mainMenu {
+    color: #ececec;
+    background: #d71921;
+    height: 45px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 0 0 18.5%;
+    z-index: 900;
+    -webkit-transition: top 4s, opacity 0.5s;
+    -moz-transition: top 4s, opacity 0.5s;
+    -ms-transition: top 4s, opacity 0.5s;
+    -o-transition: top 4s, opacity 0.5s;
+    transition: top 4s, opacity 0.5s;
+}
+
+.scroll-menu {
+    position: fixed;
+    top: 0;
+    box-shadow: 0 0 100px #404040;
+    opacity: 0.9;
+}
+
+.scroll-menu:hover {
+    background: #d71921;
+    opacity: 1;
+}
+
+#mainMenu > ul{
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: auto;
+    font-size: 0;
+    overflow: hidden;
+}
+
+#mainMenu > ul > li{
+    display: block;
+    float: left;
+    list-style: none;
+    padding: 0 30px;
+}
+
+#mainMenu > ul > li:first-child{
+    padding-left: 60px;
+}
+
+#mainMenu > ul > li a{
+    display: block;
+    margin-top: calc(1em - 1px);
+    font-size: 15px;
+    /*font-family: Calibri;*/
+    font-weight: bolder;
+    opacity: 0.9;
+    color: #f9f6f0;
+    text-decoration: none;
+}
+
+#mainMenu > ul > li a:hover{
+    opacity: 1;
+}
+
+.tableHead{
+    width: 70%;
+    margin-left: 15%;
+    border: dotted 1px black;
+}
