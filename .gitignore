@@ -1,0 +1,17 @@
+
+node_modules
+
+\.idea/codeStyles/
+
+\.idea/inspectionProfiles/
+
+\.idea/
+docs/
+cloud_sql_proxy.exe
+.env
+
+server/\.DS_Store
+
+server/routes/\.DS_Store
+
+\.DS_Store
