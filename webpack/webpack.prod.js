@@ -22,7 +22,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, '../docs'),
-        publicPath: '/ivcorp/',
+        publicPath: '/',
     },
     resolve: { extensions: ['.tsx', '.ts', '.js'] },
     module: {
