@@ -1,0 +1,48 @@
+// Импорт переменных с заданой там палитрой цветов
+@import 'colors'
+// Разные константы, ширина отступов, высота меню и т.д.
+@import "custom"
+// Стили отдельных компонентов
+@import "footer"
+@import "helpers"
+
+// Главный файлик с общими стилями
+// Не запихивай сюда все подряд
+// ТОЛЬКО ОБЩИЕ СТИЛИ!!!
+// ***********************************************************
+// Общие это означает, что такие стили могут быть доступны для
+// разных компонентов и элементов
+
+#root
+    height: 100%
+body
+    padding: 0
+    margin: 0
+    height: 100vh
+    color: $colorDarkText
+    font-family: 'Spectral', sans-serif
+    overflow: hidden
+    a
+        color: $colorLightText
+        text-decoration: none
+    p
+        margin: 0
+        padding: 0
+        line-height: 100%
+    .AppContainer
+        height: 100%
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        transition: all .4s ease
+        // Стили для компонентов выноси в другой файл
+        .TestComponent // это просто для примера
+            font-size: 40px
+            font-weight: 900
+
+// Хорошо подумай!!!
+// **************************************
+// Может ты пытаешься впихнуть сюда стиль
+// для какого-нибудь левого компонента?

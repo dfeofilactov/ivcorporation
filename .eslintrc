@@ -107,3 +107,4 @@ rules:
 
 globals:
     _: true
+    React: true

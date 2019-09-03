@@ -1,15 +1,21 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 const webpack = require('webpack');
 
 const pcckageConfig = require('../package.json');
 
 module.exports = {
-    entry: path.resolve(__dirname, '../src', 'index.js'),
+    entry: path.resolve(__dirname, '../front', 'index.js'),
     devtool: 'inline-source-map',
     mode: 'development',
     devServer: {
+        // before(app) {
+        //     app.get('*', (req, res) => {
+        //         res.send('index');
+        //     });
+        // },
         contentBase: path.resolve(__dirname, '../docs'),
         hot: true,
         historyApiFallback: true,
@@ -17,7 +23,6 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, '../docs'),
-        publicPath: '/',
     },
     resolve: { extensions: ['.tsx', '.ts', '.js'] },
     module: {
@@ -61,13 +66,7 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                use: {
-                    loader: 'html-loader',
-                    options: {
-                        minimize: false,
-                        //
-                    },
-                },
+                use: { loader: 'html-loader' },
             },
             {
                 test: /\.(png|jpg|gif|ttf)$/i,
@@ -90,11 +89,11 @@ module.exports = {
         ],
     },
     plugins: [
-        new CleanWebpackPlugin(['docs']),
+        new CleanWebpackPlugin(),
         new HtmlWebPackPlugin({
-            template: path.resolve(__dirname, '../src/public/', 'index.html'),
+            template: path.resolve(__dirname, '../front/public/', 'index.html'),
             filename: 'index.html',
-            favicon: path.resolve(__dirname, '../src/public/', 'favicon.ico'),
+            favicon: path.resolve(__dirname, '../front/public/', 'favicon.ico'),
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.ProvidePlugin({
@@ -108,6 +107,7 @@ module.exports = {
             'process.env.VERSION': JSON.stringify(pcckageConfig.version),
             //
         }),
+        new Dotenv(),
         // new webpack.DefinePlugin({
         //     'process.env.NEPTUNE_DEV_HOST': JSON.stringify(process.env.NEPTUNE_DEV_HOST),
         //     'process.env.NEPTUNE_PROD_HOST': JSON.stringify(process.env.NEPTUNE_PROD_HOST),
