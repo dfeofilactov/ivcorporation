@@ -1,12 +1,12 @@
 
 node_modules
+docs
 
 \.idea/codeStyles/
 
 \.idea/inspectionProfiles/
 
 \.idea/
-docs/
 cloud_sql_proxy.exe
 .env
 
