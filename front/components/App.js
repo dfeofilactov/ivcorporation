@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 import { OPEN } from '../redux/actions/actions';
-import TestComponent from './TestComponent';
+import Header from './MainPage/Header';
 
 class App extends Component {
     componentDidMount() {
@@ -22,8 +22,7 @@ class App extends Component {
         return (
             <>
                 <div className='AppContainer'>
-                    { dict.translate('test.greeting') }
-                    <TestComponent />
+                    <Header />
                 </div>
             </>
         );

@@ -5,6 +5,8 @@
 // Стили отдельных компонентов
 @import "footer"
 @import "helpers"
+@import "header"
+@import "menu"
 
 // Главный файлик с общими стилями
 // Не запихивай сюда все подряд
@@ -21,7 +23,6 @@ body
     height: 100vh
     color: $colorDarkText
     font-family: 'Spectral', sans-serif
-    // overflow: hidden
     a
         color: $colorLightText
         text-decoration: none
@@ -52,10 +53,7 @@ body
             backdrop-filter: blur(10px)
             -webkit-backdrop-filter: blur(10px)
             box-shadow: 5px 1px 40px rgba(0,0,0,0.2)
-        // Стили для компонентов выноси в другой файл
-        .TestComponent // это просто для примера
-            font-size: 40px
-            font-weight: 900
+            
 
 // Хорошо подумай!!!
 // **************************************
