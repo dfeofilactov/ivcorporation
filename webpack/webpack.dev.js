@@ -40,7 +40,7 @@ module.exports = {
                 use: [
                     {
                         loader: 'url-loader',
-                        options: { limit: 8192 },
+                        // options: { limit: 8192 },
                     },
                 ],
             },
@@ -67,15 +67,6 @@ module.exports = {
             {
                 test: /\.html$/,
                 use: { loader: 'html-loader' },
-            },
-            {
-                test: /\.(png|jpg|gif|ttf)$/i,
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: { limit: 8192 },
-                    },
-                ],
             },
             {
                 enforce: 'pre',

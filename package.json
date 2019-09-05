@@ -102,6 +102,7 @@
     "react-router-dom": "^5.0.1",
     "react-transition-group": "^4.2.2",
     "redux-saga": "^1.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "translucent": "^1.0.12"
   }
 }
