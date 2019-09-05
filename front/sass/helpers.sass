@@ -39,3 +39,27 @@
         font-size: 25px
         line-height: 25px
         margin-left: 20px
+
+.Scroller
+    width: 100%
+    height: 100%
+    .track
+        width: 10px !important
+        right: 0
+        height: 100%
+        transition: all .2s ease
+        &:hover
+            width: 13px !important
+    .grab
+        right: 0
+        opacity: .8
+        transition: all .3s ease
+        cursor: grab
+    .thumb
+        opacity: .4
+        background-color: $primaryColor
+        &:hover
+            right: 0
+            opacity: .8
+            transition: all .3s ease
+            cursor: grab
