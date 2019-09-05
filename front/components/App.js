@@ -4,7 +4,8 @@ import { PropTypes } from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 import { OPEN } from '../redux/actions/actions';
-import Header from './MainPage/Header';
+import Greetings from './MainPage/Greetings';
+import Header from './MainPage/Header/Header';
 
 class App extends Component {
     componentDidMount() {
@@ -18,11 +19,12 @@ class App extends Component {
         };
     }
     render() {
-        const { dict } = this.props;
+        // const { dict } = this.props;
         return (
             <>
                 <div className='AppContainer'>
                     <Header />
+                    <Greetings />
                 </div>
             </>
         );
@@ -30,7 +32,7 @@ class App extends Component {
 }
 App.propTypes = {
     dispatch: PropTypes.func.isRequired,
-    dict: PropTypes.object.isRequired,
+    // dict: PropTypes.object.isRequired,
 };
 
 function select(store) {

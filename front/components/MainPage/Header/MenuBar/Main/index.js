@@ -2,14 +2,10 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 // import { connect } from 'react-redux';
 // import classnames from 'classnames';
-class Menu extends Component {
+class Main extends Component {
     render() {
         return (
-            <div className='Menu'>
-                <img src='ivcorp.png' alt='' />
-                asdasdasd
-                asdasdasdasdas
-            </div>
+            <div className='MenuItem'>Головна</div>
         );
     }
 }
@@ -26,4 +22,4 @@ class Menu extends Component {
 //     return { };
 // }
 
-export default Menu;
+export default Main;

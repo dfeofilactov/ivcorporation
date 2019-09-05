@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import Menu from '../Menu';
 import imgSrc from '../../../public/img/main3.jpg';
+
 
 // import PropTypes from 'prop-types';
 // import { connect } from 'react-redux';
 // import classnames from 'classnames';
-class Header extends Component {
+class Greetings extends Component {
     render() {
         return (
-            <div className='Header'>
+            <div className='Greetings'>
                 <img src={ imgSrc } alt='bla' />
-                <Menu />
             </div>
         );
     }
@@ -28,4 +27,4 @@ class Header extends Component {
 //     return { };
 // }
 
-export default Header;
+export default Greetings;
