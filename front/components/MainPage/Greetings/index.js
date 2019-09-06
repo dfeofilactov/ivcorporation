@@ -1,20 +1,33 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { PropTypes } from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import imgSrc from '../../../public/img/main3.jpg';
 
-
-// import PropTypes from 'prop-types';
-// import { connect } from 'react-redux';
 // import classnames from 'classnames';
 class Greetings extends Component {
     render() {
+        const { dict } = this.props;
         return (
             <div className='Greetings'>
                 <img className='mainImg' src={ imgSrc } alt='bla' />
+                <div className='HelloText'>
+                    <div className='LegalServiceText'>
+                        { dict.translate('Greetings.LegalServiceText') }
+                    </div>
+                    <div className='SloganText'>
+                        { dict.translate('Greetings.Slogan') }
+                    </div>
+                </div>
             </div>
         );
     }
 }
 
+Greetings.propTypes = {
+    // dispatch: PropTypes.func.isRequired,
+    dict: PropTypes.object.isRequired,
+};
 //SomeComponent.propTypes = {
 //
 //};
@@ -23,8 +36,11 @@ class Greetings extends Component {
 //
 //};
 
-// function select(/* store */) {
-//     return { };
-// }
+function select(store) {
+    return {
+        // lang: store.viewReducer.lang,
+        dict: store.viewReducer.dict,
+    };
+}
 
-export default Greetings;
+export default withRouter(connect(select)(Greetings));

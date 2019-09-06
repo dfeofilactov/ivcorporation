@@ -1,12 +1,15 @@
 export default {
     'modules': {
         'main': 'Home',
-        'legal_services': 'legal services',
+        'legal_services': 'Legal Services',
+        'individual_services': 'Individual Services',
+        'addition_services': 'Addition Services',
         'contacts': 'Contacts',
         'about': 'About',
     },
-    'test': {
-        'greeting': 'THIS IS SPARTA!!! Прошу начинать', // ого, ты нашел где можно задавать переводы
-        // empty line, круто теперь ты почти профи
+    'Greetings': {
+        'LegalServiceText': 'Legal Services',
+        'Slogan': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
+        // empty line
     },
 };
