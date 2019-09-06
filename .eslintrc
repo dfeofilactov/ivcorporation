@@ -104,6 +104,7 @@ rules:
   import/prefer-default-export: 0
   linebreak-style: 0
   react/sort-comp: 0
+  react/jsx-props-no-spreading: 0
 
 globals:
     _: true
