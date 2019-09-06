@@ -1,6 +1,7 @@
 export default {
     'modules': {
-        'home': 'Главная',
+        'main': 'Главная',
+        'legal_services': 'Услуги для юр. лиц',
         'contacts': 'Контакты',
         'about': 'Обо мне',
     },

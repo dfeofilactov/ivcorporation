@@ -8,7 +8,8 @@ import Scroller from 'react-custom-scrollbars';
 // import Scroller from 'react-perfect-scrollbar';
 
 import { OPEN } from '../redux/actions/actions';
-import Header from './MainPage/Header';
+import Greetings from './MainPage/Greetings';
+import Header from './MainPage/Header/Header';
 
 class App extends Component {
     constructor(props) {
@@ -58,6 +59,7 @@ class App extends Component {
                     /* heightRelativeToParent='100%' */
                 >
                     <Header />
+                    <Greetings />
                 </Scroller>
             </div>
         );
