@@ -9,7 +9,7 @@ class Greetings extends Component {
     render() {
         return (
             <div className='Greetings'>
-                <img src={ imgSrc } alt='bla' />
+                <img className='mainImg' src={ imgSrc } alt='bla' />
             </div>
         );
     }

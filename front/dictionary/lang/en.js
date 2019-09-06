@@ -1,6 +1,7 @@
 export default {
     'modules': {
-        'home': 'Home',
+        'main': 'Home',
+        'legal_services': 'legal services',
         'contacts': 'Contacts',
         'about': 'About',
     },

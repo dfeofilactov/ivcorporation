@@ -1,25 +1,14 @@
-import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
-// import { connect } from 'react-redux';
 // import classnames from 'classnames';
-class Language extends Component {
-    render() {
-        return (
-            <div className='MenuItem'>Українська</div>
-        );
-    }
-}
 
-//SomeComponent.propTypes = {
-//
-//};
+const Language = () => {
+    return (
+        <div className='MenuItem'>Українська</div>
+    );
+};
 
-//SomeComponent.defaultProps = {
-//
-//};
+Language.propTypes = {};
 
-// function select(/* store */) {
-//     return { };
-// }
+Language.defaultProps = {};
 
 export default Language;

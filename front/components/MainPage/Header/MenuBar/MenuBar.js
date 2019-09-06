@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import Main from './Main';
-import Services from './Services';
-import Addition from './Addition';
-import Contacts from './Contacts';
+import Modules from '../../../../description/modules';
+import MenuItem from './MenuItem';
 import Language from './Language';
+// import Main from './Main';
+// import Services from './Services';
+// import Addition from './Addition';
+// import Contacts from './Contacts';
+// import Language from './Language';
 // import PropTypes from 'prop-types';
 // import { connect } from 'react-redux';
 // import classnames from 'classnames';
@@ -12,11 +15,18 @@ class MenuBar extends Component {
     render() {
         return (
             <div className='MenuBar'>
-                <Main />
+                {
+                    _.map(Modules, (item, key) => (
+                        <MenuItem key={ key } item={ item } />
+                    ))
+                }
+                <div className='divider' />
+                <Language />
+                {/* <Main />
                 <Services />
                 <Addition />
                 <Contacts />
-                <Language />
+                <Language /> */}
             </div>
         );
     }
