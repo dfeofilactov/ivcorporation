@@ -4,12 +4,12 @@ import { PropTypes } from 'prop-types';
 
 class Headline extends Component {
     render() {
-        const { dict } = this.props;
+        const { dict, caption } = this.props;
         return (
             <div className='Headline'>
                 <div className='TextHeadline'>
                     <div className='HeadlineBigText'>
-                        { dict.translate('Headline.LegalServiceText') }
+                        { dict.translate(caption) }
                     </div>
                     <div className='HeadlineSmallText'>
                         { dict.translate('Headline.Slogan') }
@@ -23,6 +23,7 @@ class Headline extends Component {
 Headline.propTypes = {
     // dispatch: PropTypes.func.isRequired,
     dict: PropTypes.object.isRequired,
+    caption: PropTypes.string.isRequired,
 };
 
 //Headline.defaultProps = {

@@ -2,7 +2,9 @@ export default {
     'modules': {
         'main': 'Home',
         'legal_services': 'Legal Services',
+        'legal_services_full': 'Legal Services',
         'individual_services': 'Individual Services',
+        'individual_services_full': 'Individual Services',
         'addition_services': 'Addition Services',
         'contacts': 'Contacts',
         'about': 'About',

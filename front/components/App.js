@@ -8,9 +8,11 @@ import Scroller from 'react-custom-scrollbars';
 // import Scroller from 'react-perfect-scrollbar';
 
 import { OPEN } from '../redux/actions/actions';
-import Greetings from './MainPage/Greetings';
-import Header from './MainPage/Header/Header';
-import LegalServices from './MainPage/LegalServices';
+import Greetings from './Greetings';
+import Menu from './Menu';
+import Services from './Services';
+import Modules from '../description/modules';
+import { SERVICE_TYPE } from '../consts/generalConsts';
 
 class App extends Component {
     constructor(props) {
@@ -59,9 +61,21 @@ class App extends Component {
                     renderTrackVertical={ props => <div { ...props } className='track' /> }
                     /* heightRelativeToParent='100%' */
                 >
-                    <Header />
+                    <Menu />
                     <Greetings />
-                    <LegalServices />
+                    {
+                        _.map(Modules, (item, key) => {
+                            if (item.type === SERVICE_TYPE) {
+                                return (
+                                    <Services
+                                        data={ item }
+                                        key={ key }
+                                    />
+                                );
+                            }
+                            return null;
+                        })
+                    }
                 </Scroller>
             </div>
         );

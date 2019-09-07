@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import imgSrc from '../../../public/img/main3.jpg';
 
 // import classnames from 'classnames';
 class Greetings extends Component {
@@ -10,7 +9,6 @@ class Greetings extends Component {
         const { dict } = this.props;
         return (
             <div className='Greetings'>
-                <img className='mainImg' src={ imgSrc } alt='bla' />
                 <div className='HelloText'>
                     <div className='LegalServiceText'>
                         { dict.translate('Greetings.LegalServiceText') }

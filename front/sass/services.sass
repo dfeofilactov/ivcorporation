@@ -1,0 +1,78 @@
+.ServicesBlock
+    width: 100%
+    background-color: rgb(240, 240, 240)
+    .Headline
+        height: 200px
+        background-color: darken($colorLight, 8)
+        color: $colorDarkText
+        align-items: center
+        .TextHeadline
+            display: flex
+            justify-content: center
+            flex-direction: column
+            height: 100%
+            padding: $gutter-m 100px
+            .HeadlineBigText
+                font-size: 24px
+                margin-bottom: 5px
+            .HeadlineSmallText
+                width: 600px
+                font-size: 16px
+                line-height: 18px
+                opacity: .4
+    .LinksContainer
+        padding: $gutter-l 80px
+        background-color: darken($colorLight, 2)
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        .LinkContainer
+            width: 50%
+            padding: 20px
+            box-sizing: border-box
+            .ServiceLink
+                display: flex
+                width: 100%
+                height: 150px
+                background-color: $colorLight
+                color: $colorDarkText
+                .ServiceImage
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    min-width: 150px
+                    height: 150px
+                    background: rgb(150, 150, 150)
+                .ServiceInfo
+                    display: flex
+                    justify-content: center
+                    // align-items: center
+                    flex-direction: column
+                    height: 100%
+                    padding: 0 20px
+                    .ServiceName
+                        font-size: 20px
+                        margin-bottom: 6px
+                    .ServiceText
+                        font-size: 14px
+                        font-weight: 300
+                        line-height: 18px
+                        opacity: .3
+                    .MoreBtn
+                        width: 150px
+                        height: 30px
+                        .BtnLabel
+                            fone-size: 16px
+.dark
+    .Headline
+        background-color: $colorDark
+        color: $colorLightText
+    .LinksContainer
+        background-color: lighten($colorDark, 2)
+        .LinkContainer
+            .ServiceLink
+                background-color: lighten($colorDark, 6)
+                color: $colorLightText
+
+
+        

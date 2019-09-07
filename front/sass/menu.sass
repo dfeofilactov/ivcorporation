@@ -1,16 +1,27 @@
-.MenuBar
-    z-index: 1;
-    height: 20px;
-    width: 50vw;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: flex-end
-    .MenuItem
+.Menu
+    position: fixed
+    z-index: 100
+    width: 100%
+    height: 120px
+    padding: $gutter-m 100px
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    .Logo
+        position: relative
+        height: 100px
+        width: 100%
+        img 
+            height: 100px
+    .MenuItemsContainer
         display: flex
         align-items: center
-        padding: 10px
-        height: 15px
-        white-space: nowrap
-    .BorderBlock
-        border-right: 2px solid black
+        flex-direction: row
+        height: 20px
+        .MenuItem
+            display: flex
+            align-items: center
+            padding: 10px
+            height: 15px
+            white-space: nowrap

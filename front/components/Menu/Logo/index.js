@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import Logo from './Logo';
-import MenuBar from './MenuBar/MenuBar';
+import img2Src from '../../../public/img/ivcorp.png';
 // import PropTypes from 'prop-types';
 // import { connect } from 'react-redux';
 // import classnames from 'classnames';
-class Header extends Component {
+class Logo extends Component {
     render() {
         return (
-            <div className='Header'>
-                <Logo />
-                <MenuBar />
+            <div className='Logo'>
+                <img src={ img2Src } alt='' />
             </div>
         );
     }
@@ -27,4 +25,4 @@ class Header extends Component {
 //     return { };
 // }
 
-export default Header;
+export default Logo;
