@@ -10,6 +10,7 @@ import Scroller from 'react-custom-scrollbars';
 import { OPEN } from '../redux/actions/actions';
 import Greetings from './MainPage/Greetings';
 import Header from './MainPage/Header/Header';
+import LegalServices from './MainPage/LegalServices';
 
 class App extends Component {
     constructor(props) {
@@ -60,6 +61,7 @@ class App extends Component {
                 >
                     <Header />
                     <Greetings />
+                    <LegalServices />
                 </Scroller>
             </div>
         );
