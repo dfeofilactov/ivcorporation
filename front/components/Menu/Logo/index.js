@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import img2Src from '../../../public/img/ivcorp.png';
 // import PropTypes from 'prop-types';
 // import { connect } from 'react-redux';
 // import classnames from 'classnames';
@@ -7,7 +6,7 @@ class Logo extends Component {
     render() {
         return (
             <div className='Logo'>
-                <img src={ img2Src } alt='' />
+                <img src='https://drive.google.com/open?id=1IWH3EI-uNLTNYmREobHg1aD-Om-tVm6i' alt='' />
             </div>
         );
     }
