@@ -6,7 +6,7 @@ class Logo extends Component {
     render() {
         return (
             <div className='Logo'>
-                <img src='https://drive.google.com/open?id=1IWH3EI-uNLTNYmREobHg1aD-Om-tVm6i' alt='' />
+                <img src='https://live.staticflickr.com/65535/48701108292_210a00bb9d_o.png' alt='' />
             </div>
         );
     }
