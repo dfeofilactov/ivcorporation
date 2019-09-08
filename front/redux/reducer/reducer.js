@@ -4,8 +4,8 @@ import Immutable from 'seamless-immutable';
 import * as ActionTypes from '../../consts/actionTypes';
 import { getDict } from '../../dictionary';
 import {
-    LANG_EN,
-    // LANG_RU,
+    // LANG_EN,
+    LANG_RU,
 } from '../../consts/generalConsts';
 // import Modules from '../../description/modules';
 // import photos from '../../description/photos';
@@ -14,11 +14,11 @@ const initialState = Immutable({
     SnackbarMessage: {},
     SnackbarVisible: false,
     userParams: {
-        lang: LANG_EN,
+        lang: LANG_RU,
         //
     },
     mobileVersion: false,
-    dict: getDict(LANG_EN),
+    dict: getDict(LANG_RU),
 });
 
 const viewReducer = createReducer(initialState, {

@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import Menu from '../Menu';
-import imgSrc from '../../../public/img/main3.jpg';
-
+import img2Src from '../../../public/img/ivcorp.png';
 // import PropTypes from 'prop-types';
 // import { connect } from 'react-redux';
 // import classnames from 'classnames';
-class Header extends Component {
+class Logo extends Component {
     render() {
         return (
-            <div className='Header'>
-                <img src={ imgSrc } alt='bla' />
-                <Menu />
+            <div className='Logo'>
+                <img src={ img2Src } alt='' />
             </div>
         );
     }
@@ -28,4 +25,4 @@ class Header extends Component {
 //     return { };
 // }
 
-export default Header;
+export default Logo;

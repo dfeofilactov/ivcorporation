@@ -8,7 +8,6 @@ docs
 
 \.idea/
 cloud_sql_proxy.exe
-.env
 
 server/\.DS_Store
 

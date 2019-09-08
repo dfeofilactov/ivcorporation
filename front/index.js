@@ -8,6 +8,8 @@ import {
 } from '@material-ui/core/styles';
 import { Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
+import 'react-custom-scroll/dist/customScroll.css';
+import 'react-perfect-scrollbar/dist/css/styles.css';
 
 import './sass/main.sass';
 // import reducer from './redux/reducer/reducer';

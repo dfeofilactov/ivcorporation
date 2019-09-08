@@ -5,8 +5,10 @@
 // Стили отдельных компонентов
 @import "footer"
 @import "helpers"
-@import "header"
+@import "greetings"
 @import "menu"
+@import "header"
+@import "services"
 
 // Главный файлик с общими стилями
 // Не запихивай сюда все подряд
@@ -22,6 +24,7 @@ body
     margin: 0
     height: 100vh
     color: $colorDarkText
+    overflow-x: hidden
     font-family: 'Spectral', sans-serif
     a
         color: $colorLightText
@@ -31,14 +34,10 @@ body
         padding: 0
         line-height: 100%
     .AppContainer
-        height: 100%
+        height: 100vh
         width: 100%
-        display: flex
-        flex-direction: column
-        // justify-content: center
-        align-items: center
         transition: all .4s ease
-        img
+        mainImg
             width: 100%
             position: absolute
             top: 0
@@ -53,6 +52,10 @@ body
             backdrop-filter: blur(10px)
             -webkit-backdrop-filter: blur(10px)
             box-shadow: 5px 1px 40px rgba(0,0,0,0.2)
+        .divider
+            height: 100%
+            border-right: 1px solid black
+            margin: 10px
             
 
 // Хорошо подумай!!!

@@ -3,7 +3,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 // Тут нужно будет повытаскивать с макета цвет и вставить по логике вещей
 const colors = {
     default: '#232323', // самый используемый
-    primary: '#D8CECE', // цвет акцента
+    primary: '#DD2222', // цвет акцента
     secondary: '#C99A41',
     text: '#FBF9EA',
 };
