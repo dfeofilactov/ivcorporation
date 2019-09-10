@@ -1,28 +1,52 @@
 .backimg
     position: absolute
     width: 100%
+    height: 100vh
     left: 0
-    top: -100px
     z-index: 0
+    img
+        @media #{$media-phones}
+            top: 0
+            height: 100%
+            width: auto
+            margin-left: -75%
+        height: 100%
+        width: 100%
+        object-fit: cover
 .Greetings
-    width: 100%;
-    height: 100vh;
+    @media #{$media-phones}
+        padding: $phones_padding
+        align-items: flex-start
+    width: 100%
+    height: 100vh
     position: relative
-    padding: $gutter-m 100px
+    padding: $desktop_padding
     background-size: cover
     display: flex
     justify-content: space-between
     align-items: center
     .hello_text
+        @media #{$media-phones}
+            margin-top: 26vh
         // padding: $gutter-m 100px
         padding: 0 20px
         .legal_service_text
-            font-size: 50px;
-            font-weight: bold;
+            @media #{$media-phones}
+                width: 50%
+                font-size: 30px
+                white-space: normal
+                line-height: 30px
+                margin-bottom: 10px
+            font-size: 50px
+            font-weight: bold
             text-transform: uppercase
             white-space: nowrap
             opacity: 0.8
         .slogan_text
+            @media #{$media-phones}
+                width: 70%
+                font-size: 18px
+                opacity: 0.5
             width: 600px
             font-size: 20px
             line-height: 20px
