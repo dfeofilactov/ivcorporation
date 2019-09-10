@@ -13,7 +13,9 @@ class Greetings extends Component {
         const { dict } = this.props;
         return (
             <>
-                <img className='backimg' src={ IMG_GREETINGS_URL } alt='background' />
+                <div className='backimg'>
+                    <img src={ IMG_GREETINGS_URL } alt='background' />
+                </div>
                 <div className='Greetings'>
                     <div className='hello_text'>
                         <div className='legal_service_text'>

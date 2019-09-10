@@ -9,36 +9,56 @@
         color: $colorDarkText
         align-items: center
         .TextHeadline
+            @media #{$media-phones}
+                padding: $phones_padding
             display: flex
             justify-content: center
             flex-direction: column
             height: 100%
-            padding: $gutter-m 100px
+            padding: $desktop_padding
             .HeadlineBigText
+                @media #{$media-phones}
+                    font-size: 20px
+                padding: 0 20px
                 font-size: 24px
                 margin-bottom: 5px
             .HeadlineSmallText
+                @media #{$media-phones}
+                    width: 100%
+                padding: 0 20px
                 width: 600px
                 font-size: 16px
+                font-weight: 200
                 line-height: 18px
                 opacity: .4
     .LinksContainer
+        @media #{$media-phones}
+            padding: $phones_padding
+            flex-direction: column
         padding: $gutter-l 80px
         background-color: darken($colorLight, 2)
         display: flex
         flex-direction: row
         flex-wrap: wrap
         .LinkContainer
+            @media #{$media-phones}
+                width: 100%
+                padding: 10px
             width: 50%
             padding: 20px
             box-sizing: border-box
             .ServiceLink
+                @media #{$media-phones}
+                    height: $service_mobile_height
                 display: flex
                 width: 100%
                 height: 150px
                 background-color: $colorLight
                 color: $colorDarkText
                 .ServiceImage
+                    @media #{$media-phones}
+                        height: $service_mobile_height
+                        min-width: $service_mobile_height
                     display: flex
                     justify-content: center
                     align-items: center
@@ -56,11 +76,15 @@
                         font-size: 20px
                         margin-bottom: 6px
                     .ServiceText
+                        @media #{$media-phones}
+                            display: none
                         font-size: 14px
                         font-weight: 300
                         line-height: 18px
                         opacity: .3
                     .MoreBtn
+                        @media #{$media-phones}
+                            display: none
                         width: 150px
                         height: 30px
                         .BtnLabel

@@ -1,9 +1,11 @@
 .Menu
+    @media #{$media-phones}
+        padding: $phones_padding
     position: fixed
     z-index: 100
     width: 100%
     height: 120px
-    padding: $gutter-m 100px
+    padding: $desktop_padding
     display: flex
     color: $colorDarkText
     flex-direction: row
@@ -17,6 +19,8 @@
         img
             height: 100px
     .menu_item_container
+        @media #{$media-phones}
+            display: none
         display: flex
         align-items: center
         flex-direction: row
