@@ -107,6 +107,7 @@
     "react-transition-group": "^4.2.2",
     "redux-saga": "^1.0.5",
     "redux-thunk": "^2.3.0",
+    "rgbaster": "^2.1.1",
     "translucent": "^1.0.12"
   }
 }

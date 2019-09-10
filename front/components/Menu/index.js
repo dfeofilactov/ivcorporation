@@ -15,9 +15,9 @@ import Logo from './Logo';
 class Menu extends Component {
     render() {
         return (
-            <div className='Menu'>
+            <div className='Menu dark scrolled'>
                 <Logo />
-                <div className='MenuItemsContainer'>
+                <div className='menu_item_container'>
                     {
                         _.map(Modules, (item, key) => (
                             <MenuItem key={ key } item={ item } />

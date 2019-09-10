@@ -12,16 +12,26 @@
         position: relative
         height: 100px
         width: 100%
-        img 
+        img
             height: 100px
-    .MenuItemsContainer
+    .menu_item_container
         display: flex
         align-items: center
         flex-direction: row
         height: 20px
-        .MenuItem
+        .menu_item
             display: flex
             align-items: center
             padding: 10px
             height: 15px
             white-space: nowrap
+
+.scrolled
+    background-color: transparentize($defaultColor, .5)
+    backdrop-filter: blur(20px)
+.dark.scrolled
+    background-color: transparentize($colorDark, .5)
+    backdrop-filter: blur(20px)
+
+.dark
+    color: $colorLightText

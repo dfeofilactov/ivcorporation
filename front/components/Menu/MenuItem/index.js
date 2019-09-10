@@ -6,7 +6,7 @@ const MenuItem = ({ item, dict }) => {
     return (
         <div
             id={ item.name }
-            className='MenuItem'
+            className='menu_item'
         >
             { dict.translate(item.caption) }
         </div>
