@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+
 import Modules from '../../description/modules';
 import MenuItem from './MenuItem';
 import Language from './Language';
@@ -8,19 +12,21 @@ import Logo from './Logo';
 // import Addition from './Addition';
 // import Contacts from './Contacts';
 // import Language from './Language';
-// import PropTypes from 'prop-types';
-// import { connect } from 'react-redux';
-// import classnames from 'classnames';
 
 class Menu extends Component {
     render() {
+        const { scrolled, selected } = this.props;
         return (
-            <div className='Menu dark scrolled'>
+            <div className={ classnames('Menu', { 'scrolled': scrolled, 'dark': false }) }>
                 <Logo />
                 <div className='menu_item_container'>
                     {
                         _.map(Modules, (item, key) => (
-                            <MenuItem key={ key } item={ item } />
+                            <MenuItem
+                                selected={ selected === key }
+                                key={ key }
+                                item={ item }
+                            />
                         ))
                     }
                     <div className='divider' />
@@ -31,16 +37,22 @@ class Menu extends Component {
     }
 }
 
-//SomeComponent.propTypes = {
-//
-//};
+Menu.propTypes = {
+    scrolled: PropTypes.bool.isRequired,
+    selected: PropTypes.number.isRequired,
+    //
+};
 
 //SomeComponent.defaultProps = {
 //
 //};
 
-// function select(/* store */) {
-//     return { };
-// }
+function select(store) {
+    return {
+        scrolled: store.viewReducer.MenuScrolled,
+        selected: store.viewReducer.MenuSelectedIndex,
+        //
+    };
+}
 
-export default Menu;
+export default connect(select)(Menu);

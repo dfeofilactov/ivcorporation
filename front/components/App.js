@@ -7,7 +7,11 @@ import Scroller from 'react-custom-scrollbars';
 // import Scroller from 'react-custom-scroll';
 // import Scroller from 'react-perfect-scrollbar';
 
-import { OPEN } from '../redux/actions/actions';
+import {
+    OPEN,
+    SET_MENU_SCROLLED,
+    RESET_MENU,
+} from '../redux/actions/actions';
 import Greetings from './Greetings';
 import Menu from './Menu';
 import Services from './Services';
@@ -23,6 +27,7 @@ class App extends Component {
         };
         this.onThumbMouseUp = :: this.onThumbMouseUp;
         this.onThumbMouseDown = :: this.onThumbMouseDown;
+        this.handleScroll = :: this.handleScroll;
     }
     componentDidMount() {
         const isMobile = window.screen.width < 600;
@@ -42,6 +47,11 @@ class App extends Component {
         console.log('mouse up');
         this.setState({ thumbGrab: true });
     }
+    handleScroll(e) {
+        const { scrollTop } = e.target;
+        if (scrollTop === 0) this.props.dispatch(RESET_MENU());
+        else this.props.dispatch(SET_MENU_SCROLLED());
+    }
     render() {
         // const { dict } = this.props;
         const { thumbGrab } = this.state;
@@ -49,6 +59,7 @@ class App extends Component {
             <div className='AppContainer'>
                 <Scroller
                     className='Scroller'
+                    onScroll={ this.handleScroll }
                     renderThumbVertical={ props => (
                         <div
                             role='presentation'

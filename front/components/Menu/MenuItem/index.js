@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-// import classnames from 'classnames';
+import classnames from 'classnames';
 
-const MenuItem = ({ item, dict }) => {
+const MenuItem = ({ item, dict, selected }) => {
     return (
         <div
             id={ item.name }
-            className='menu_item'
+            className={ classnames('menu_item', { 'selected': selected }) }
         >
             { dict.translate(item.caption) }
         </div>
@@ -16,6 +16,7 @@ const MenuItem = ({ item, dict }) => {
 MenuItem.propTypes = {
     item: PropTypes.object.isRequired,
     dict: PropTypes.object.isRequired,
+    selected: PropTypes.bool.isRequired,
     //
 };
 

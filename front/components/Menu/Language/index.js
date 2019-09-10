@@ -3,7 +3,7 @@
 
 const Language = () => {
     return (
-        <div className='menu_item'>Українська</div>
+        <div className='menu_item language_btn'>Українська</div>
     );
 };
 
