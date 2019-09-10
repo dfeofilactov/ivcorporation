@@ -17,6 +17,7 @@ import Menu from './Menu';
 import Services from './Services';
 import Modules from '../description/modules';
 import { SERVICE_TYPE } from '../consts/generalConsts';
+import ImportantBlock from './ImportantBlock';
 
 class App extends Component {
     constructor(props) {
@@ -87,6 +88,7 @@ class App extends Component {
                             return null;
                         })
                     }
+                    <ImportantBlock />
                 </Scroller>
             </div>
         );
