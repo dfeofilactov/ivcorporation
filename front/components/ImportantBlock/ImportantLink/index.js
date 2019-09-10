@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // import classnames from 'classnames';
 import { Button } from '@material-ui/core';
+
 class ImportantLink extends Component {
     render() {
         return (
@@ -10,11 +11,11 @@ class ImportantLink extends Component {
                 <div className='ImportantImage'>image</div>
                 <div className='ImportantText'> Some text</div>
                 <Button
-                            className='MoreBtn'
-                            color='primary'
-                            variant='contained'
-                            classes={ { label: 'BtnLabel' } }
-                        >
+                    className='MoreBtn'
+                    color='primary'
+                    variant='contained'
+                    classes={ { label: 'BtnLabel' } }
+                >
                             Подробнее
                 </Button>
             </div>
