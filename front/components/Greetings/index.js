@@ -2,22 +2,29 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import { IMG_GREETINGS_URL } from '../../consts/generalConsts';
 
 // import classnames from 'classnames';
 class Greetings extends Component {
+    // componentDidMount() {
+    //     RGBaster
+    // }
     render() {
         const { dict } = this.props;
         return (
-            <div className='Greetings'>
-                <div className='HelloText'>
-                    <div className='LegalServiceText'>
-                        { dict.translate('Greetings.LegalServiceText') }
-                    </div>
-                    <div className='SloganText'>
-                        { dict.translate('Greetings.Slogan') }
+            <>
+                <img className='backimg' src={ IMG_GREETINGS_URL } alt='background' />
+                <div className='Greetings'>
+                    <div className='hello_text'>
+                        <div className='legal_service_text'>
+                            { dict.translate('Greetings.LegalServiceText') }
+                        </div>
+                        <div className='slogan_text'>
+                            { dict.translate('Greetings.Slogan') }
+                        </div>
                     </div>
                 </div>
-            </div>
+            </>
         );
     }
 }

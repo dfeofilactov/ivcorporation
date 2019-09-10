@@ -13,6 +13,8 @@ import {
 const initialState = Immutable({
     SnackbarMessage: {},
     SnackbarVisible: false,
+    MenuSelectedIndex: 0,
+    MenuScrolled: false,
     userParams: {
         lang: LANG_RU,
         //
@@ -42,6 +44,12 @@ const viewReducer = createReducer(initialState, {
     },
     [ActionTypes.CLOSE_SNACKBAR](state) {
         return state.merge({ SnackbarVisible: false });
+    },
+    [ActionTypes.SET_MENU_SCROLLED](state) {
+        return state.merge({ MenuScrolled: true });
+    },
+    [ActionTypes.RESET_MENU](state) {
+        return state.merge({ MenuScrolled: false });
     },
 });
 

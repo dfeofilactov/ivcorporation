@@ -5,23 +5,52 @@
     height: 120px
     padding: $gutter-m 100px
     display: flex
+    color: $colorDarkText
     flex-direction: row
     align-items: center
     justify-content: space-between
+    transition: all .4s ease
     .Logo
         position: relative
         height: 100px
         width: 100%
-        img 
+        img
             height: 100px
-    .MenuItemsContainer
+    .menu_item_container
         display: flex
         align-items: center
         flex-direction: row
         height: 20px
-        .MenuItem
+        font-size: 16px
+        .menu_item
             display: flex
             align-items: center
-            padding: 10px
+            padding: 15px
             height: 15px
             white-space: nowrap
+            font-weight: 300
+            opacity: .6
+            transition: all .4s ease
+            &:hover
+                opacity: 1
+        .menu_item.selected
+            opacity: 1
+        .language_btn
+            opacity: 1
+
+.scrolled
+    background-color: transparentize($defaultColor, .6)
+    backdrop-filter: blur(10px)
+    -webkikt-backdrop-filter: blur(10px)
+    // filter: url('#ivBlurMenu')
+    // -webkikt-filter: url('#ivBlurMenu')
+    height: 80px
+.dark.scrolled
+    background-color: transparentize($colorDark, .5)
+    backdrop-filter: blur(20px)
+    -webkikt-backdrop-filter: blur(20px)
+    // filter: url('#ivBlurMenu')
+    // -webkikt-filter: url('#ivBlurMenu')
+
+.dark
+    color: $colorLightText

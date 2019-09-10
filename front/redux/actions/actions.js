@@ -24,3 +24,9 @@ export const SHOW_SNACKBAR = (msg) => {
 export const CLOSE_SNACKBAR = () => {
     return { type: ActionTypes.CLOSE_SNACKBAR };
 };
+export const SET_MENU_SCROLLED = () => {
+    return { type: ActionTypes.SET_MENU_SCROLLED };
+};
+export const RESET_MENU = () => {
+    return { type: ActionTypes.RESET_MENU };
+};
