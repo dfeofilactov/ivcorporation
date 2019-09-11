@@ -54,8 +54,12 @@ body
             box-shadow: 5px 1px 40px rgba(0,0,0,0.2)
         .divider
             height: 100%
-            border-right: 1px solid black
+            border-right: 1px solid rgba(0,0,0,0.4)
             margin: 10px
+        .MoreBtn
+            @media #{$media-phones}
+                display: none
+            width: 130px
 
 // Хорошо подумай!!!
 // **************************************

@@ -29,8 +29,12 @@ export const theme = createMuiTheme({
     overrides: {
         MuiButton: {
             root: {
-                margin: 8,
+                margin: 0,
                 borderRadius: 0,
+            },
+            label: {
+                textTransform: 'none',
+                //
             },
         },
     },

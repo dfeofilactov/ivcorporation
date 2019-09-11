@@ -19,6 +19,7 @@ class ServiceLink extends Component {
                             color='primary'
                             variant='contained'
                             classes={ { label: 'BtnLabel' } }
+                            size='small'
                         >
                             Подробнее
                         </Button>

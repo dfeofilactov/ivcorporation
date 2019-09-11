@@ -10,7 +10,6 @@
     color: $colorDarkText
     flex-direction: row
     align-items: center
-    cursor: pointer
     justify-content: space-between
     transition: all .4s ease
     .Logo
@@ -38,15 +37,18 @@
             transition: all .4s ease
             &:hover
                 opacity: 1
+                cursor: pointer
         .menu_item.selected
             opacity: 1
         .language_btn
             opacity: 1
 
 .scrolled
-    background-color: transparentize($defaultColor, .6)
+    background-color: transparentize($defaultColor, .4)
     backdrop-filter: blur(10px)
     -webkikt-backdrop-filter: blur(10px)
+    border-bottom: 1px solid rgba(255,255,255,0.2)
+    box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.1), 0px 0px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12)
     // filter: url('#ivBlurMenu')
     // -webkikt-filter: url('#ivBlurMenu')
     height: 80px
