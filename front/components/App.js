@@ -14,8 +14,9 @@ import Menu from './Menu';
 import Services from './Services';
 import Modules from '../description/modules';
 import { SERVICE_TYPE } from '../consts/generalConsts';
-import ImportantBlock from './ImportantBlock';
+import Important from './Important';
 import Scroller from './Helpers/Scroller';
+import Contacts from './Contacts';
 
 class App extends Component {
     componentDidMount() {
@@ -48,7 +49,8 @@ class App extends Component {
                             return null;
                         })
                     }
-                    <ImportantBlock />
+                    <Important />
+                    <Contacts />
                 </Scroller>
             </div>
         );

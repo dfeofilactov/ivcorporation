@@ -14,3 +14,4 @@ export const MODULE_TYPE_DARK = 'dark_module';
 
 export const IMG_GREETINGS_URL = 'https://0fz4hg.db.files.1drv.com/y4mIB6uA54y-Q7EIyV39VWmiPwnTWYCUvuKc-es84OPYzsD3dD_673JHdT_1Pyo2DoHNaa2oltEocHcHM3vtFVto8wzDvRvFa30LYr5O6nmsrAdRZAw2YCthtCij-tfjpE-XqBqMIZnopZPj1xOSi5O3X5858pETyYu-9gcEP-aNgTrW_4W_JXB2zhtgu3_Z2z0SV3WZsUmDxmpDTXDLLPizw?width=4896&height=3264&cropmode=none';
 export const IMG_IMPORTANT_BGR_URL = 'https://i.imgur.com/P294MGn.jpg';
+export const IMG_LOGO  = 'https://i.imgur.com/OrbCM0u.png';

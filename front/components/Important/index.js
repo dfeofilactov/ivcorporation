@@ -4,10 +4,10 @@ import { connect } from 'react-redux';
 import { IMG_IMPORTANT_BGR_URL } from '../../consts/generalConsts';
 import ImportantLink from './ImportantLink';
 // import classnames from 'classnames';
-class ImportantBlock extends Component {
+class Important extends Component {
     render() {
         return (
-            <div className='ImportantBlock'>
+            <div className='Important'>
                 <img className='BackgroundImg' src={ IMG_IMPORTANT_BGR_URL } alt='background' />
                 <div className='Label'>Another Important</div>
                 <div className='Important_Items_Container'>
@@ -20,12 +20,12 @@ class ImportantBlock extends Component {
     }
 }
 
-// ImportantBlock.propTypes = {
+// Important.propTypes = {
 //     // dispatch: PropTypes.func.isRequired,
 //     // dict: PropTypes.object.isRequired,
 // };
 
-//ImportantBlock.defaultProps = {
+//Important.defaultProps = {
 //
 //};
 
@@ -33,4 +33,4 @@ function select(store) {
     return { dict: store.viewReducer.dict };
 }
 
-export default connect(select)(ImportantBlock);
+export default connect(select)(Important);

@@ -12,12 +12,21 @@
     align-items: center
     justify-content: space-between
     transition: all .4s ease
-    .Logo
-        position: relative
-        height: 100px
+    .LogoContainer
+        display: flex
+        justify-content: row
+        align-items: center
+        height: 100%
         width: 100%
         img
-            height: 100px
+            min-width: 50px
+            height: 50px
+        .NameLogo
+            white-space: nowrap
+            font-weight: bold
+            font-size: 16px
+        .AdvocatLogo
+            font-size: 10px
     .menu_item_container
         @media #{$media-phones}
             display: none
