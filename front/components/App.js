@@ -17,6 +17,7 @@ import { SERVICE_TYPE } from '../consts/generalConsts';
 import Important from './Important';
 import Scroller from './Helpers/Scroller';
 import Contacts from './Contacts';
+// import TemplatePage from './TemplatePage';
 
 class App extends Component {
     componentDidMount() {
@@ -49,8 +50,9 @@ class App extends Component {
                             return null;
                         })
                     }
-                    <Important />
-                    <Contacts />
+                <Important />
+                    {/* <TemplatePage /> */} 
+                    <Contacts /> 
                 </Scroller>
             </div>
         );
