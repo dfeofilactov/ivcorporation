@@ -5,15 +5,21 @@
     align-items: center
     padding: $gutter-l 200px
     .ContactsContainer
+        position: relative
         display: flex
         justify-content: row
         align-items: center
-        white-space: nowrap
         .ContactsBlock
-            width: 5vw
-            img
-                height: 50px
+            position: relative
+            white-space: nowrap
+            height: 100%
+            .Adress
+                padding-bottom: 10px
             .DarkContactsText
                 opacity: .6
-
-                
+                padding-bottom: 10px
+            .SocialNetworksIMG
+                height: 50px
+                img 
+                    padding-right: 20px
+                    max-height: 30px
