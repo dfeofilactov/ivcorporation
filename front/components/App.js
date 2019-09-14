@@ -17,7 +17,8 @@ import { SERVICE_TYPE } from '../consts/generalConsts';
 import Important from './Important';
 import Scroller from './Helpers/Scroller';
 import Contacts from './Contacts';
-// import TemplatePage from './TemplatePage';
+import MainPage from './MainPage';
+import TemplatePage from './TemplatePage';
 
 class App extends Component {
     componentDidMount() {
@@ -36,7 +37,7 @@ class App extends Component {
             <div className='AppContainer'>
                 <Scroller>
                     <Menu />
-                    <Greetings />
+                    {/* <Greetings />
                     {
                         _.map(Modules, (item, key) => {
                             if (item.type === SERVICE_TYPE) {
@@ -50,8 +51,9 @@ class App extends Component {
                             return null;
                         })
                     }
-                <Important />
-                    {/* <TemplatePage /> */} 
+                    <Important /> */}
+                    <MainPage />
+                    {/* <TemplatePage />  */}
                     <Contacts /> 
                 </Scroller>
             </div>
