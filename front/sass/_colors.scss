@@ -1,11 +1,12 @@
 // Main Colors
+// $defaultColor: #FBF9EA;
 $defaultColor: #ECECEC;
 $primaryColor: #F82323;
 $secondaryColor: #0D0D0D;
-$colorText: #0D0D0D;
-$colorDark: #0D0D0D;
-$colorLight: #ECECEC;
-$colorDarkText: #0D0D0D;
-$colorLightText: #ECECEC;
+$colorText: $secondaryColor;
+$colorDark: $secondaryColor;
+$colorLight: $defaultColor;
+$colorDarkText: $secondaryColor;
+$colorLightText: $defaultColor;
 
 $colorSuccess: rgb(61, 199, 43);

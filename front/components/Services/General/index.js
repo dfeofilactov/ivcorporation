@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Button } from '@material-ui/core';
 // import classnames from 'classnames';
 
-class ServiceLink extends Component {
+class General extends Component {
     render() {
         const { data } = this.props;
         return (
@@ -30,12 +30,12 @@ class ServiceLink extends Component {
     }
 }
 
-ServiceLink.propTypes = {
+General.propTypes = {
     data: PropTypes.object.isRequired,
     //
 };
 
-//ServiceLink.defaultProps = {
+//General.defaultProps = {
 //
 //};
 
@@ -43,4 +43,4 @@ function select(/* store */) {
     return { };
 }
 
-export default connect(select)(ServiceLink);
+export default connect(select)(General);

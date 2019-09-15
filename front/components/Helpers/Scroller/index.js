@@ -16,18 +16,17 @@ class Scroller extends Component {
         };
     }
     onThumbMouseUp = () => {
-        console.log('mouse up');
         this.setState({ thumbGrab: false });
     };
     onThumbMouseDown = () => {
-        console.log('mouse up');
         this.setState({ thumbGrab: true });
     };
     handleScroll = (e) => {
         const { scrollTop } = e.target;
+        const { MenuScrolled } = this.props;
+
         if (scrollTop === 0) this.props.dispatch(RESET_MENU());
-        if (scrollTop === 0) this.props.dispatch(RESET_MENU());
-        else this.props.dispatch(SET_MENU_SCROLLED());
+        else if (!MenuScrolled) this.props.dispatch(SET_MENU_SCROLLED());
     };
     render() {
         const { thumbGrab } = this.state;
@@ -56,6 +55,7 @@ class Scroller extends Component {
 Scroller.propTypes = {
     children: PropTypes.any,
     dispatch: PropTypes.func.isRequired,
+    MenuScrolled: PropTypes.bool.isRequired,
     //
 };
 
@@ -68,6 +68,7 @@ function select(store) {
     return {
         // lang: store.viewReducer.lang,
         dict: store.viewReducer.dict,
+        MenuScrolled: store.viewReducer.MenuScrolled,
     };
 }
 

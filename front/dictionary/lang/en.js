@@ -6,6 +6,7 @@ export default {
         'individual_services': 'Individual Services',
         'individual_services_full': 'Individual Services',
         'addition_services': 'Addition Services',
+        'addition_services_full': 'Addition Services',
         'contacts': 'Contacts',
         'about': 'About',
     },

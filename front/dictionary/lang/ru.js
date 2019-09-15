@@ -6,6 +6,7 @@ export default {
         'individual_services': 'Услуги для физ.лиц',
         'individual_services_full': 'Услуги для физических лиц',
         'addition_services': 'Доп. услуги',
+        'addition_services_full': 'Дополнительные услуги',
         'contacts': 'Контакты',
         'about': 'Обо мне',
     },
