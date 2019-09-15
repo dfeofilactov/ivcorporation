@@ -4,7 +4,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 const colors = {
     default: '#232323', // самый используемый
     primary: '#DD2222', // цвет акцента
-    secondary: '#C99A41',
+    secondary: '#ECECEC',
     text: '#FBF9EA',
 };
 
@@ -13,7 +13,7 @@ export const theme = createMuiTheme({
         // Use the system font instead of the default Roboto font.
         useNextVariants: true,
         fontFamily: [
-            '"Josefin Sans"',
+            'Spectral',
             // '"Poiret One"',
             // '"Comfortaa"',
         ].join(','),
@@ -34,6 +34,7 @@ export const theme = createMuiTheme({
             },
             label: {
                 textTransform: 'none',
+                fontSize: 14,
                 //
             },
         },

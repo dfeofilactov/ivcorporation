@@ -6,7 +6,7 @@ import classnames from 'classnames';
 import Modules from '../../description/modules';
 import MenuItem from './MenuItem';
 import Language from './Language';
-import Logo from './Logo';
+import Logo from '../Helpers/Logo';
 // import Main from './Main';
 // import Services from './Services';
 // import Addition from './Addition';
@@ -20,16 +20,18 @@ class Menu extends Component {
             <div className={ classnames('Menu', { 'scrolled': scrolled, 'dark': false }) }>
                 <Logo />
                 <div className='menu_item_container'>
-                    {
-                        _.map(Modules, (item, key) => (
-                            <MenuItem
-                                selected={ selected === key }
-                                key={ key }
-                                item={ item }
-                            />
-                        ))
-                    }
-                    <div className='divider' />
+                    <div className='menu_services'>
+                        {
+                            _.map(Modules, (item, key) => (
+                                <MenuItem
+                                    selected={ selected === key }
+                                    key={ key }
+                                    item={ item }
+                                />
+                            ))
+                        }
+                        <div className='divider' />
+                    </div>
                     <Language />
                 </div>
             </div>

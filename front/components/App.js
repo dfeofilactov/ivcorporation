@@ -9,13 +9,8 @@ import {
     OPEN,
     //
 } from '../redux/actions/actions';
-import Greetings from './Greetings';
-import Menu from './Menu';
-import Services from './Services';
-import Modules from '../description/modules';
-import { SERVICE_TYPE } from '../consts/generalConsts';
-import ImportantBlock from './ImportantBlock';
 import Scroller from './Helpers/Scroller';
+import Markup from './Markup';
 
 class App extends Component {
     componentDidMount() {
@@ -33,22 +28,7 @@ class App extends Component {
         return (
             <div className='AppContainer'>
                 <Scroller>
-                    <Menu />
-                    <Greetings />
-                    {
-                        _.map(Modules, (item, key) => {
-                            if (item.type === SERVICE_TYPE) {
-                                return (
-                                    <Services
-                                        data={ item }
-                                        key={ key }
-                                    />
-                                );
-                            }
-                            return null;
-                        })
-                    }
-                    <ImportantBlock />
+                    <Markup />
                 </Scroller>
             </div>
         );

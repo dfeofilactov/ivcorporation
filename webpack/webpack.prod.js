@@ -35,7 +35,7 @@ module.exports = {
                 use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' }],
             },
             {
-                test: /\.(png|jpg|gif|svg)$/i,
+                test: /\.(png|jpg|gif)$/i,
                 use: [
                     {
                         loader: 'url-loader',
@@ -81,6 +81,10 @@ module.exports = {
                 // options: {
                 //     // eslint options (if necessary)
                 // },
+            },
+            {
+                test: /\.svg$/,
+                use: ['@svgr/webpack'],
             },
         ],
     },
