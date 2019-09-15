@@ -8,7 +8,7 @@ class LogoType extends Component {
         return (
             <div className='LogoContain'>
                 <div className='LogoIMG'>
-                    <img src={ IMG_LOGO } alt='logo'/>
+                    <img src={ IMG_LOGO } alt='logo' />
                 </div>
                 <div className='LogoTextContain'>
                     <div className='AdvocatName'>ІННА ВАСИЛІВСЬКА</div>

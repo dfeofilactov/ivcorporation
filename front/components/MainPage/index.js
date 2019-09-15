@@ -12,20 +12,20 @@ class MainPage extends Component {
         return (
             <div>
                 <Greetings />
-                    {
-                        _.map(Modules, (item, key) => {
-                            if (item.type === SERVICE_TYPE) {
-                                return (
-                                    <Services
-                                        data={ item }
-                                        key={ key }
-                                    />
-                                );
-                            }
-                            return null;
-                        })
-                    }
-                    <Important />
+                {
+                    _.map(Modules, (item, key) => {
+                        if (item.type === SERVICE_TYPE) {
+                            return (
+                                <Services
+                                    data={ item }
+                                    key={ key }
+                                />
+                            );
+                        }
+                        return null;
+                    })
+                }
+                <Important />
             </div>
         );
     }

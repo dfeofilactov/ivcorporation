@@ -11,13 +11,13 @@ class ImportantLink extends Component {
                 <div className='ImportantImage'>image</div>
                 <div className='ImportantText'> Some text</div>
                 <div className='ImportantButton'>
-                        <Button
+                    <Button
                         className='MoreBtn'
                         color='primary'
                         variant='contained'
                         classes={ { label: 'BtnLabel' } }
                     >
-                                Подробнее
+                        Подробнее
                     </Button>
                 </div>
             </div>

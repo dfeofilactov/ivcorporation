@@ -7,18 +7,18 @@ import ContactsLink from './ContactsLink';
 class Contacts extends Component {
     render() {
         return (
-            <div className='Contacts'> 
+            <div className='Contacts'>
                 <div className='ContactsContainer'>
-                   <ContactsBlock />
-                   <ContactsLink />
-                   <ContactsLink />
-                   <ContactsLink />
+                    <ContactsBlock />
+                    <ContactsLink />
+                    <ContactsLink />
+                    <ContactsLink />
                 </div>
                 <div className='ContactsCredits'>
-                        <div className='ContactsRightsName'>Інна Василівська.&nbsp;</div>
-                        <div className='ContactsRightsExplain'>Адвокат. Всі права захищено. Україна, Київ, 2019.</div>
-                        <div className='Design'>Designed by &nbsp;</div>
-                        <div className='Creator'>Denis Feofilaktov</div>
+                    <div className='ContactsRightsName'>Інна Василівська.&nbsp;</div>
+                    <div className='ContactsRightsExplain'>Адвокат. Всі права захищено. Україна, Київ, 2019.</div>
+                    <div className='Design'>Designed by &nbsp;</div>
+                    <div className='Creator'>Denis Feofilaktov</div>
                 </div>
             </div>
         );

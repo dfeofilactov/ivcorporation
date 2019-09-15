@@ -17,9 +17,8 @@ class ContactsBLock extends Component {
                 <div className='SocialNetworksIMG'>
                     <img src='http://pngimg.com/uploads/telegram/telegram_PNG22.png' alt='' />
                     <img src='http://pngimg.com/uploads/twitter/twitter_PNG9.png' alt='' />
-                    <img src='http://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19756.png' alt='' /> 
+                    <img src='http://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19756.png' alt='' />
                 </div>
-                
             </div>
         );
     }

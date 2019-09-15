@@ -9,16 +9,10 @@ import {
     OPEN,
     //
 } from '../redux/actions/actions';
-import Greetings from './Greetings';
 import Menu from './Menu';
-import Services from './Services';
-import Modules from '../description/modules';
-import { SERVICE_TYPE } from '../consts/generalConsts';
-import Important from './Important';
 import Scroller from './Helpers/Scroller';
 import Contacts from './Contacts';
 import MainPage from './MainPage';
-import TemplatePage from './TemplatePage';
 
 class App extends Component {
     componentDidMount() {
@@ -54,7 +48,7 @@ class App extends Component {
                     <Important /> */}
                     <MainPage />
                     {/* <TemplatePage />  */}
-                    <Contacts /> 
+                    <Contacts />
                 </Scroller>
             </div>
         );
