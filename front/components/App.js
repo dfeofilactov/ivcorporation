@@ -9,6 +9,12 @@ import {
     OPEN,
     //
 } from '../redux/actions/actions';
+import Greetings from './Greetings';
+import Menu from './Menu';
+import Services from './Services';
+import Modules from '../description/modules';
+import { SERVICE_TYPE } from '../consts/generalConsts';
+import ImportantBlock from './ImportantBlock';
 import Scroller from './Helpers/Scroller';
 import Markup from './Markup';
 
@@ -29,6 +35,8 @@ class App extends Component {
             <div className='AppContainer'>
                 <Scroller>
                     <Markup />
+                    <MainPage />
+                    <Contacts />
                 </Scroller>
             </div>
         );

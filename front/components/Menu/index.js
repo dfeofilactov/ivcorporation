@@ -7,6 +7,7 @@ import Modules from '../../description/modules';
 import MenuItem from './MenuItem';
 import Language from './Language';
 import Logo from '../Helpers/Logo';
+import LogoType from '../LogoType';
 // import Main from './Main';
 // import Services from './Services';
 // import Addition from './Addition';
@@ -18,7 +19,7 @@ class Menu extends Component {
         const { scrolled, selected } = this.props;
         return (
             <div className={ classnames('Menu', { 'scrolled': scrolled, 'dark': false }) }>
-                <Logo />
+                <LogoType />
                 <div className='menu_item_container'>
                     <div className='menu_services'>
                         {
