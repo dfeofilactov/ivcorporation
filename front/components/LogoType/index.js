@@ -11,8 +11,8 @@ class LogoType extends Component {
                     <img src={ IMG_LOGO } alt='logo' />
                 </div>
                 <div className='LogoTextContain'>
-                    <div className='AdvocatName'>ІННА ВАСИЛІВСЬКА</div>
-                    <div className='AdvocatJob'>АДВОКАТ</div>
+                    <div className='LawyerName'>ІННА ВАСИЛІВСЬКА</div>
+                    <div className='LawyerJob'>АДВОКАТ</div>
                 </div>
             </div>
         );

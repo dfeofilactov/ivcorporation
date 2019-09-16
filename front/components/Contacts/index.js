@@ -14,6 +14,14 @@ class Contacts extends Component {
                     <ContactsLink />
                     <ContactsLink />
                 </div>
+                {/*
+                    Тоже нужна автоматизация
+                    Мы НЕ должны менять параметры и надписи страницы
+                    тут
+                    Это должно происходить в отдельном месте
+                    Это просто View в котором описан внешний вид
+                    Никаких данных!!!
+                */}
                 <div className='ContactsCredits'>
                     <div className='ContactsRightsName'>Інна Василівська.&nbsp;</div>
                     <div className='ContactsRightsExplain'>Адвокат. Всі права захищено. Україна, Київ, 2019.</div>

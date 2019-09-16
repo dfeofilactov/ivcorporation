@@ -4,6 +4,13 @@ import { connect } from 'react-redux';
 // import classnames from 'classnames';
 class ContactsLink extends Component {
     render() {
+        // Не четко!!!
+        // Не четко!!!
+        // То есть каждый раз когда я вдруг захочу добавить услугу
+        // Мы должны будем добавлять ее и сюда вручную?
+        // Где магия автоматизации???
+        // Зачем нам нужно описание (папочка description)
+        // Там же уже все прописано и названия услуг и сколько их
         return (
             <div className='ContactsLink'>
                 <div className='ContactsLinkHeader'>

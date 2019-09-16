@@ -6,7 +6,7 @@ import classnames from 'classnames';
 import Modules from '../../description/modules';
 import MenuItem from './MenuItem';
 import Language from './Language';
-import Logo from '../Helpers/Logo';
+// import Logo from '../Helpers/Logo';
 import LogoType from '../LogoType';
 // import Main from './Main';
 // import Services from './Services';
