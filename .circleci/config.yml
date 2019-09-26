@@ -24,6 +24,7 @@ jobs:
       - image: circleci/node:10.15
     working_directory: ~/repo
     steps:
+      - run: ls
       - run:
           name: Deploy Master to Firebase
           command: firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
