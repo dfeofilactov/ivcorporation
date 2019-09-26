@@ -37,16 +37,15 @@ jobs:
           - run:
               name: Deploy Master to Firebase
               command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+        workflows:
+          version: 2
 
-      workflows:
-        version: 2
-
-        -deploy:
-          jobs:
-            - build-job
-            - deploy-job:
-                requires:
-                  - build-job
-                filters:
-                  branches:
-                    only: firebase
+          -deploy:
+            jobs:
+              - build-job
+              - deploy-job:
+                  requires:
+                    - build-job
+                  filters:
+                    branches:
+                      only: firebase
