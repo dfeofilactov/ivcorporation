@@ -29,10 +29,10 @@ jobs:
             - run:
                 name: Build
                 command: npm run build
-            # - persist_to_workspace:
-            #     root: .
-            #     paths:
-            #         - .
+            - persist_to_workspace:
+                root: .
+                paths:
+                    - .
 
             # command: firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
     firebase_deploy_job:
@@ -48,15 +48,8 @@ jobs:
         working_directory: ~/repo
         steps:
             - run:
-                name: List directory
-                command: ls
-            - run: cd ../
-            - run:
-                name: List parent directory
-                command: ls
-            - run:
                 name: Deploy Master to Firebase
-                command: ~/node_modules/.bin/firebase deploy --token "$FIREBASE_DEPLOY_TOKEN" --only hosting
+                command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_DEPLOY_TOKEN" --only hosting
 workflows:
     version: 2
     firebase_build:
