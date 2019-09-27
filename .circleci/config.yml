@@ -32,7 +32,7 @@ jobs:
                 root: ~/repo
                 # Must be relative path from root
                 paths:
-                    - ~/repo
+                    - ./
 
             # command: firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
     firebase_deploy_job:
