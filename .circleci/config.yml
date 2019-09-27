@@ -48,12 +48,21 @@ jobs:
                 command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_DEPLOY_TOKEN" --only hosting
 workflows:
     version: 2
-    firebase_deploy_master:
-        filters:
-            tags:
-                only: /.*/
-            branches:
-                only: master
+    test_build:
+        triggers:
+            filters:
+                branches:
+                    ignore: master
+        jobs:
+            - build_job
+    # deploying to firebase
+    firebase_deploy:
+        triggers:
+            filters:
+                tags:
+                    only: /.*/
+                branches:
+                    only: master
         jobs:
             - build_job
             - firebase_deploy_job:
