@@ -49,14 +49,19 @@ jobs:
 workflows:
     version: 2
     firebase_deploy_master:
+        filters:
+            tags:
+                only: /.*/
+            branches:
+                only: master
         jobs:
             - build_job
             - firebase_deploy_job:
                 requires:
                     - build_job
-                filters:
-                    tags:
-                        only: /.*/
-                    branches:
-                        only: master
+                # filters:
+                #     tags:
+                #         only: /.*/
+                #     branches:
+                #         only: master
 
