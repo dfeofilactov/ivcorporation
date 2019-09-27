@@ -48,7 +48,6 @@ workflows:
     version: 2
     firebase_build:
         jobs:
-            - build_job
             - firebase_deploy_job:
                 requires:
                     - build_job
