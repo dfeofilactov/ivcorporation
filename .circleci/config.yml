@@ -1,6 +1,6 @@
 version: 2
 jobs:
-      build_job:
+    build_job:
         docker:
             # specify the version you desire here
             - image: circleci/node:10.15
@@ -31,7 +31,7 @@ jobs:
                 command: npm run build
 
             # command: firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
-      firebase_deploy_job:
+    firebase_deploy_job:
         docker:
             # specify the version you desire here
             - image: circleci/node:10.15
@@ -47,9 +47,8 @@ jobs:
                 name: Deploy Master to Firebase
                 command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_DEPLOY_TOKEN" --only hosting
 workflows:
-      version: 2
+    version: 2
     firebase_deploy_master:
-        triggers:
         jobs:
             - build_job
             - firebase_deploy_job:
