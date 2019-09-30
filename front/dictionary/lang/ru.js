@@ -11,7 +11,7 @@ export default {
         'about': 'Обо мне',
     },
     'Greetings': {
-        'LegalServiceText': 'Юридические услуги',
+        'LegalServiceText': 'Услуги юриста',
         'Slogan': 'Лондон является столицей Великобритании. А мы являемся лучшими юристами и адвокатами в Украине.',
         // empty line
     },

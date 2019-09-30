@@ -1,10 +1,10 @@
 {
   "name": "ivcorp",
-  "version": "1.1.4",
+  "version": "1.1.3",
   "description": "lawyer corporation",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run build",
     "front": "webpack-dev-server --open --mode development --config webpack/webpack.dev.js",
     "build": "webpack -p --config webpack/webpack.prod.js",
     "watch": "webpack --watch",
@@ -56,6 +56,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
     "file-loader": "^4.2.0",
+    "firebase-tools": "^7.4.0",
     "history": "^4.9.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
