@@ -10,7 +10,9 @@ class General extends Component {
         return (
             <div className='LinkContainer'>
                 <div className='ServiceLink'>
-                    <div className='ServiceImage'>image</div>
+                    <div className='ServiceImage'>
+                        <img src={ data.image } alt='service' />
+                    </div>
                     <div className='ServiceInfo'>
                         <div className='ServiceName'>{data.name}</div>
                         <div className='ServiceText'>{data.text}</div>

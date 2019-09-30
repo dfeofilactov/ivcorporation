@@ -26,6 +26,8 @@
             display: flex
             align-items: center
             flex-direction: row
+            .menu_board
+
         .menu_item
             display: flex
             align-items: center
@@ -61,3 +63,38 @@
 
 .dark
     color: $colorLightText
+
+.menu_board
+    // padding: 5px 10px
+    // &:hover
+    //     background-color: transparentize($colorDark, .4) !important
+    .menu_board_paper
+        background-color: transparentize($colorDark, .4) !important
+        backdrop-filter: blur(10px)
+        -webkikt-backdrop-filter: blur(10px)
+        position: absolute
+        .elements_container
+            display: flex
+            flex-direction: column
+            padding-bottom: 20px
+            .divider
+                margin: 0 20px
+                border-bottom: 1px solid transparentize($colorDark, .2)
+            .board_element
+                width: 350px
+                padding: 20px
+                background-color: transparentize($colorDark, 1)
+                &:hover
+                    background-color: transparentize($colorDark, .8)
+                .board_sub_caption
+                    font-size: 14px
+                    line-height: 16px
+                    opacity: .3
+                .board_caption
+                    font-size: 16px
+                    font-weight: 600
+                    line-height: 30px
+                .board_text
+                    font-size: 14px
+                    opacity: .5
+                    margin-bottom: 10px
