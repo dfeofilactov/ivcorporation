@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Button } from '@material-ui/core';
-// import classnames from 'classnames';
+import classnames from 'classnames';
+import { Icon, Button } from '@material-ui/core';
+
 class BoardElement extends Component {
     render() {
         const { data } = this.props;
         return (
-            <div className='board_element'>
-                <div className='board_sub_caption'>Услуги</div>
-                <div className='board_caption'>{ data.caption }</div>
-                <div className='board_text'>{ data.text }</div>
-                <Button
-                    className='MoreBtn'
-                    color='primary'
-                    variant='contained'
-                    classes={ { label: 'BtnLabel' } }
-                    size='small'
-                >
-                    Подробнее
-                </Button>
-            </div>
+            <Button className='board_element'>
+                <div className='board_images'>
+                    <div className={ classnames('image_type', 'first') }>
+                        <img src={ data.imagePrimary } alt='board' />
+                    </div>
+                    <div className={ classnames('image_type', 'second') }>
+                        <img src={ data.imageSecondary } alt='board' />
+                    </div>
+                </div>
+                <div className='board_content'>
+                    <div className='board_sub_caption'>Услуги</div>
+                    <div className='board_caption'>{data.caption}</div>
+                    <div className='board_text'>{data.text}</div>
+                </div>
+                <div className='board_go'>
+                    <Icon>keyboard_arrow_right</Icon>
+                </div>
+            </Button>
         );
     }
 }

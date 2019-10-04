@@ -5,8 +5,10 @@ import {
     Paper, Fade,
     //
 } from '@material-ui/core';
+import classnames from 'classnames';
+
 import BoardElement from './BoardElement';
-// import classnames from 'classnames';
+
 class MenuBoard extends Component {
     constructor(props) {
         super(props);
@@ -16,7 +18,7 @@ class MenuBoard extends Component {
         };
     }
     render() {
-        const { item } = this.props;
+        const { item, dict, selected } = this.props;
         const id = this.state.open ? 'popper' : null;
         return (
             <div
@@ -26,12 +28,13 @@ class MenuBoard extends Component {
                 onMouseLeave={ this.closeBoard }
             >
                 <div
+                    className={ classnames('menu_item', 'menu_item_board', { 'selected': selected }) }
                     aria-describedby={ id }
                     ref={ elem => this.anchorEl = elem }
                 >
-                    { item.caption }
+                    { dict.translate(item.caption) }
                 </div>
-                <Fade in={ this.state.open } timeout={ 0.3 }>
+                <Fade in={ this.state.open } timeout={ 0.6 }>
                     <Paper className='menu_board_paper'>
                         <div className='elements_container'>
                             {
@@ -58,6 +61,8 @@ class MenuBoard extends Component {
 
 MenuBoard.propTypes = {
     item: PropTypes.object.isRequired,
+    dict: PropTypes.object.isRequired,
+    selected: PropTypes.bool.isRequired,
     //
 };
 
@@ -65,8 +70,11 @@ MenuBoard.propTypes = {
 //
 //};
 
-function select(/* store */) {
-    return { };
+function select(store) {
+    return {
+        // lang: store.viewReducer.lang,
+        dict: store.viewReducer.dict,
+    };
 }
 
 export default connect(select)(MenuBoard);

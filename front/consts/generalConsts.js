@@ -1,6 +1,7 @@
 // Languages
 export const LANG_RU = 'ru';
 export const LANG_EN = 'en';
+export const LANG_UA = 'ua';
 
 // Menu elements types
 export const MENU_TYPE_ELEMENT = 'menu_type_item';
