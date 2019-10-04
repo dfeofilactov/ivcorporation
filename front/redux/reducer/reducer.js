@@ -5,7 +5,7 @@ import * as ActionTypes from '../../consts/actionTypes';
 import { getDict } from '../../dictionary';
 import {
     // LANG_EN,
-    LANG_RU,
+    LANG_UA,
 } from '../../consts/generalConsts';
 // import Modules from '../../description/modules';
 // import photos from '../../description/photos';
@@ -16,11 +16,11 @@ const initialState = Immutable({
     MenuSelectedIndex: 0,
     MenuScrolled: false,
     userParams: {
-        lang: LANG_RU,
+        lang: LANG_UA,
         //
     },
     mobileVersion: false,
-    dict: getDict(LANG_RU),
+    dict: getDict(LANG_UA),
 });
 
 const viewReducer = createReducer(initialState, {

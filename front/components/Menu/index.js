@@ -37,6 +37,7 @@ class Menu extends Component {
                                 }
                                 return (
                                     <MenuBoard
+                                        selected={ selected === key }
                                         key={ key }
                                         item={ item }
                                     />
