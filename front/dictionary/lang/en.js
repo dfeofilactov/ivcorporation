@@ -15,4 +15,9 @@ export default {
         'Slogan': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
         // empty line
     },
+    'menu': {
+        'main': 'Home',
+        'services': 'Services',
+        'contacts': 'Contacts',
+    },
 };
