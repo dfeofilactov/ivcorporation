@@ -25,7 +25,7 @@ const Modules = [
         path: '',
         icon: 'home',
         caption: 'modules.legal_services',
-        fullCaption: 'modules.legal_services_full',
+        slogan: 'legal_services.slogan',
         isDark: true,
         services: [
             {
@@ -79,7 +79,7 @@ const Modules = [
         path: '',
         icon: 'home',
         caption: 'modules.individual_services',
-        fullCaption: 'modules.individual_services_full',
+        slogan: 'individual_services.slogan',
         isDark: false,
         services: [
             {
@@ -127,7 +127,7 @@ const Modules = [
         path: '',
         icon: 'home',
         caption: 'modules.addition_services',
-        fullCaption: 'modules.addition_services_full',
+        slogan: 'addition_services.slogan',
         services: [
             {
                 name: 'test',

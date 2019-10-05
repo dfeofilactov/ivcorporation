@@ -5,16 +5,10 @@ import classnames from 'classnames';
 
 import MenuItem from './MenuItem';
 import Language from './Language';
-import LogoType from '../LogoType';
-import MenuDescription from '../../description/menu';
-import { MENU_TYPE_ELEMENT } from '../../consts/generalConsts';
+import LogoType from '../../LogoType';
+import MenuDescription from '../../../description/menu';
+import { MENU_TYPE_ELEMENT } from '../../../consts/generalConsts';
 import MenuBoard from './MenuBoard';
-// import Logo from './Logo';
-// import Main from './Main';
-// import Services from './Services';
-// import Addition from './Addition';
-// import Contacts from './Contacts';
-// import Language from './Language';
 
 class Menu extends Component {
     render() {

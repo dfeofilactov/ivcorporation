@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Greetings from '../Greetings';
-import Services from '../Services';
-import Important from '../Important';
-import Modules from '../../description/modules';
-import { SERVICE_TYPE } from '../../consts/generalConsts';
-// import classnames from 'classnames';
+
+import Greetings from './Greetings';
+import Modules from '../../../description/modules';
+import { SERVICE_TYPE } from '../../../consts/generalConsts';
+import Services from './Services';
+
 class MainPage extends Component {
     render() {
         return (
@@ -25,7 +25,6 @@ class MainPage extends Component {
                         return null;
                     })
                 }
-                <Important />
             </div>
         );
     }

@@ -62,12 +62,6 @@ rules:
     "error",
     "consistent"
 ]
-  object-curly-newline: [
-    "error",
-    {
-        "multiline": true
-    }
-]
   jsx-quotes: [
     2,
     "prefer-single"
@@ -105,6 +99,7 @@ rules:
   linebreak-style: 0
   react/sort-comp: 0
   react/jsx-props-no-spreading: 0
+  object-curly-newline: 0
 
 globals:
     _: true
