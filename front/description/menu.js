@@ -16,6 +16,7 @@ const MenuDescription = [
         icon: 'home',
         caption: 'menu.main',
         menuType: MENU_TYPE_ELEMENT,
+        path: '/',
     },
     {
         name: MENU_SERVICES,
@@ -51,6 +52,7 @@ const MenuDescription = [
         icon: 'home',
         caption: 'menu.contacts',
         menuType: MENU_TYPE_ELEMENT,
+        path: '/contacts',
     },
 ];
 

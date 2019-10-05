@@ -6,6 +6,7 @@ import Greetings from './Greetings';
 import Modules from '../../../description/modules';
 import { SERVICE_TYPE } from '../../../consts/generalConsts';
 import Services from './Services';
+import Footer from '../Footer';
 
 class MainPage extends Component {
     render() {
@@ -25,6 +26,7 @@ class MainPage extends Component {
                         return null;
                     })
                 }
+                <Footer />
             </div>
         );
     }
