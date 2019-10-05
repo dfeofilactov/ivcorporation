@@ -1,15 +1,17 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
+import { Link } from 'react-router-dom';
 
 const MenuItem = ({ item, dict, selected }) => {
     return (
-        <div
+        <Link
+            to={ item.path }
             id={ item.name }
             className={ classnames('menu_item', { 'selected': selected }) }
         >
             { dict.translate(item.caption) }
-        </div>
+        </Link>
     );
 };
 

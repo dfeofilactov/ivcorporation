@@ -1,12 +1,9 @@
 export default {
     'modules': {
         'main': 'Главная',
-        'legal_services': 'Услуги для юр.лиц',
-        'legal_services_full': 'Услуги для юридических лиц',
-        'individual_services': 'Услуги для физ.лиц',
-        'individual_services_full': 'Услуги для физических лиц',
-        'addition_services': 'Доп. услуги',
-        'addition_services_full': 'Дополнительные услуги',
+        'legal_services': 'Услуги для юридических лиц',
+        'individual_services': 'Услуги для физических лиц',
+        'addition_services': 'Дополнительные услуги',
         'contacts': 'Контакты',
         'about': 'Обо мне',
     },

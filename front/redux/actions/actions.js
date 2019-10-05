@@ -30,3 +30,12 @@ export const SET_MENU_SCROLLED = () => {
 export const RESET_MENU = () => {
     return { type: ActionTypes.RESET_MENU };
 };
+export const OPEN_PAGE = () => {
+    return { type: ActionTypes.OPEN_PAGE };
+};
+export const SET_SCROLL_POS = (pos) => {
+    return {
+        type: ActionTypes.SET_SCROLL_POS,
+        pos,
+    };
+};

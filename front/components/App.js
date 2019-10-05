@@ -2,8 +2,6 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { withRouter } from 'react-router-dom';
-// import Scroller from 'react-custom-scroll';
-// import Scroller from 'react-perfect-scrollbar';
 
 import {
     OPEN,

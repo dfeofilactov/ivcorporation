@@ -6,7 +6,8 @@ import { connect } from 'react-redux';
 import Headline from './Headline';
 import General from './General';
 import Additional from './Additional';
-import { SERVICE_TYPE_GENERAL, SERVICE_TYPE_ADDITIONAL, IMG_ADDITIONAL_BGR_URL } from '../../consts/generalConsts';
+import { SERVICE_TYPE_GENERAL, SERVICE_TYPE_ADDITIONAL, IMG_ADDITIONAL_BGR_URL } from '../../../../consts/generalConsts';
+import ServicesDescription from '../../../../description/services';
 
 class Services extends Component {
     constructor(props) {
@@ -17,21 +18,25 @@ class Services extends Component {
     }
     render() {
         const { data } = this.props;
+        const services = _.get(ServicesDescription, `${ data.name }.services`);
         return (
             <>
-                { data.serviceType === SERVICE_TYPE_GENERAL && this.renderGeneral() }
-                { data.serviceType === SERVICE_TYPE_ADDITIONAL && this.renderAdditional() }
+                { data.serviceType === SERVICE_TYPE_GENERAL && this.renderGeneral(services) }
+                { data.serviceType === SERVICE_TYPE_ADDITIONAL && this.renderAdditional(services) }
             </>
         );
     }
-    renderGeneral() {
+    renderGeneral(services) {
         const { data } = this.props;
         return (
             <div className={ classnames('ServicesGeneral', { 'dark': data.isDark }) }>
-                <Headline caption={ data.fullCaption } />
+                <Headline
+                    caption={ data.caption }
+                    slogan={ data.slogan }
+                />
                 <div className='LinksContainer'>
                     {
-                        _.map(data.services, (item, key) => {
+                        _.map(services, (item, key) => {
                             return (
                                 <General
                                     data={ item }
@@ -45,18 +50,18 @@ class Services extends Component {
             </div>
         );
     }
-    renderAdditional() {
+    renderAdditional(services) {
         const { data, dict } = this.props;
         return (
             <div className='AdditionalContainer'>
                 <img className='AdditionalBackgroundImg' src={ IMG_ADDITIONAL_BGR_URL } alt='backAdditional' />
                 <div className='AdditionalBackgroundFilter' />
                 <div className='AdditionalLabelContainer'>
-                    <div className='AdditionalLabel'>{dict.translate(data.fullCaption)}</div>
+                    <div className='AdditionalLabel'>{dict.translate(data.caption)}</div>
                 </div>
                 <div className={ classnames('ServicesAdditional') }>
                     {
-                        _.map(data.services, (item, key) => {
+                        _.map(services, (item, key) => {
                             return (
                                 <Additional
                                     data={ item }

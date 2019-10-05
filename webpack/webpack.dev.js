@@ -12,17 +12,23 @@ module.exports = {
     mode: 'development',
     devServer: {
         // before(app) {
+        //     app.use(express.static(path.join(__dirname, '../docs', '/')));
         //     app.get('*', (req, res) => {
-        //         res.send('index');
+        //         res.sendFile('./index.html');
         //     });
         // },
         contentBase: path.resolve(__dirname, '../docs'),
         hot: true,
         historyApiFallback: true,
+        // staticOptions: {
+        //     redirect: true,
+        //     //
+        // },
     },
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, '../docs'),
+        publicPath: '/',
     },
     resolve: { extensions: ['.tsx', '.ts', '.js'] },
     module: {

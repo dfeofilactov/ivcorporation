@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 // import classnames from 'classnames';
 import { Button, Icon } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import { OPEN_PAGE } from '../../../../../redux/actions/actions';
 
 class Additional extends Component {
     render() {
@@ -13,15 +15,18 @@ class Additional extends Component {
                     <Icon fontSize='inherit' color='secondary'>{ data.icon }</Icon>
                 </div>
                 <div className='AdditionalCaption'>{ data.caption }</div>
-                <Button
-                    className='MoreBtn'
-                    color='primary'
-                    variant='contained'
-                    size='small'
-                    classes={ { label: 'BtnLabel' } }
-                >
+                <Link className='additional_link' to={ `/services/${ data.name }` }>
+                    <Button
+                        className='MoreBtn'
+                        color='primary'
+                        variant='contained'
+                        size='small'
+                        classes={ { label: 'BtnLabel' } }
+                        onClick={ () => { this.props.dispatch(OPEN_PAGE()); } }
+                    >
                     Подробнее
-                </Button>
+                    </Button>
+                </Link>
             </div>
         );
     }
@@ -29,6 +34,7 @@ class Additional extends Component {
 
 Additional.propTypes = {
     data: PropTypes.object.isRequired,
+    dispatch: PropTypes.func.isRequired,
     //
 };
 //Additional.defaultProps = {

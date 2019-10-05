@@ -11,7 +11,8 @@
 @import "importants"
 @import "logo"
 @import "contacts"
-@import "template_page"
+@import "info"
+@import "errorpage"
      
 // Главный файлик с общими стилями
 // Не запихивай сюда все подряд
@@ -70,6 +71,22 @@ body
             width: 100%
             img
                 height: 100%
+        .backimg
+            position: absolute
+            width: 100%
+            height: 100vh
+            overflow: hidden
+            left: 0
+            z-index: -1
+            img
+                @media #{$media-phones}
+                    top: 0
+                    height: 100%
+                    width: auto
+                    margin-left: -75%
+                height: 100%
+                width: 100%
+                object-fit: cover
 // Хорошо подумай!!!
 // **************************************
 // Может ты пытаешься впихнуть сюда стиль

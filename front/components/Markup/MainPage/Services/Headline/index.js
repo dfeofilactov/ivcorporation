@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 
 class Headline extends Component {
     render() {
-        const { dict, caption } = this.props;
+        const { dict, caption, slogan } = this.props;
         return (
             <div className='Headline'>
                 <div className='TextHeadline'>
@@ -12,7 +12,7 @@ class Headline extends Component {
                         { dict.translate(caption) }
                     </div>
                     <div className='HeadlineSmallText'>
-                        { dict.translate('Headline.Slogan') }
+                        { dict.translate(slogan) }
                     </div>
                 </div>
             </div>
@@ -24,6 +24,7 @@ Headline.propTypes = {
     // dispatch: PropTypes.func.isRequired,
     dict: PropTypes.object.isRequired,
     caption: PropTypes.string.isRequired,
+    slogan: PropTypes.string.isRequired,
 };
 
 //Headline.defaultProps = {

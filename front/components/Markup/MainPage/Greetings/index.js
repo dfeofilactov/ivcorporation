@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import { IMG_GREETINGS_URL } from '../../consts/generalConsts';
+import { IMG_GREETINGS_URL } from '../../../../consts/generalConsts';
 
 // import classnames from 'classnames';
 class Greetings extends Component {
