@@ -20,6 +20,7 @@ const initialState = Immutable({
         //
     },
     ScrollPos: 0,
+    loading: true,
     mobileVersion: false,
     dict: getDict(LANG_UA),
 });
@@ -34,7 +35,7 @@ const viewReducer = createReducer(initialState, {
             mobileVersion: action.params.isMobile,
         });
     },
-    [ActionTypes.CHANGE_LANG](state, action) {
+    [ActionTypes.SET_LANG](state, action) {
         return state.merge({
             userParams: { lang: action.lang },
             dict: getDict(action.lang),
@@ -45,6 +46,12 @@ const viewReducer = createReducer(initialState, {
     },
     [ActionTypes.CLOSE_SNACKBAR](state) {
         return state.merge({ SnackbarVisible: false });
+    },
+    [ActionTypes.SHOW_LOADER](state) {
+        return state.merge({ loading: true });
+    },
+    [ActionTypes.CLOSE_LOADER](state) {
+        return state.merge({ loading: false });
     },
     [ActionTypes.SET_MENU_SCROLLED](state) {
         return state.merge({ MenuScrolled: true });

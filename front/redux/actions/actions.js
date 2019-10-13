@@ -9,9 +9,21 @@ export const OPEN = (params) => {
         params,
     };
 };
+export const SHOW_LOADER = () => {
+    return { type: ActionTypes.SHOW_LOADER };
+};
+export const CLOSE_LOADER = () => {
+    return { type: ActionTypes.CLOSE_LOADER };
+};
 export const CHANGE_LANG = (lang) => {
     return {
         type: ActionTypes.CHANGE_LANG,
+        lang,
+    };
+};
+export const SET_LANG = (lang) => {
+    return {
+        type: ActionTypes.SET_LANG,
         lang,
     };
 };

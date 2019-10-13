@@ -19,7 +19,6 @@
         align-items: center
         flex-direction: row
         height: 20px
-        font-size: 16px
         .menu_services
             @media #{$media-normal}
                 display: none
@@ -37,14 +36,27 @@
             font-weight: 300
             opacity: .6
             transition: all .4s ease
-            color: $secondaryColor
+            color: $secondary_color
             &:hover
                 opacity: 1
                 cursor: pointer
-        .menu_item.selected
-            opacity: 1
-        .language_btn
-            opacity: 1
+            &.selected
+                opacity: 1
+        .language_container
+            .language_btn
+                opacity: 1
+                color: $secondary_color
+            .language_board
+                position: absolute
+                display: flex
+                flex-direction: column
+                box-shadow: $shadow20
+                padding: 7px 0
+                .btn_language
+                    // padding: 10px 15px
+                    // line-height: 16px
+                    // min-height: 14px
+                    // color: darken($colorLight, 10)
 
 .scrolled
     background-color: transparentize($defaultColor, .4)
@@ -63,7 +75,7 @@
     // -webkikt-filter: url('#ivBlurMenu')
 
 .dark
-    color: $colorLightText
+    color: $color_light_text
 
 .menu_board
     // padding: 5px 10px
