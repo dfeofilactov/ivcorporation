@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 import {
-    OPEN,
+    OPEN, CLOSE_LOADER,
     //
 } from '../redux/actions/actions';
 import Scroller from './Helpers/Scroller';
@@ -19,9 +19,8 @@ class App extends Component {
         if (isMobile) console.log('[VERSION] MOBILE');
         else console.log('[VERSION] DESKTOP');
         window.onload = () => {
-            _.delay(() => {
-                this.props.dispatch(OPEN({ isMobile }));
-            }, 1000);
+            this.props.dispatch(OPEN({ isMobile }));
+            this.props.dispatch(CLOSE_LOADER());
         };
         console.log('done');
     }

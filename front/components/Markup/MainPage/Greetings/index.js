@@ -18,7 +18,7 @@ class Greetings extends Component {
                     <img
                         src={ IMG_GREETINGS_URL }
                         alt='background'
-                        onLoad={ () => this.props.dispatch(CLOSE_LOADER()) }
+                        // onLoad={ () => this.props.dispatch(CLOSE_LOADER()) }
                     />
                 </div>
                 <div className='Greetings'>
