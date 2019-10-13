@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { IMG_GREETINGS_URL } from '../../../../consts/generalConsts';
-import { CLOSE_LOADER } from '../../../../redux/actions/actions';
+// import { CLOSE_LOADER } from '../../../../redux/actions/actions';
 
 // import classnames from 'classnames';
 class Greetings extends Component {
@@ -37,7 +37,7 @@ class Greetings extends Component {
 }
 
 Greetings.propTypes = {
-    dispatch: PropTypes.func.isRequired,
+    // dispatch: PropTypes.func.isRequired,
     dict: PropTypes.object.isRequired,
 };
 //SomeComponent.propTypes = {
