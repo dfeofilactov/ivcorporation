@@ -4,7 +4,7 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import ReactScroller from 'react-custom-scrollbars';
 
-import { SET_MENU_SCROLLED, RESET_MENU, SET_SCROLL_POS } from '../../../redux/actions/actions';
+import { SET_MENU_SCROLLED, RESET_MENU } from '../../../redux/actions/actions';
 
 class Scroller extends Component {
     constructor(props) {
@@ -32,7 +32,7 @@ class Scroller extends Component {
         const { scrollTop } = e.target;
         const { MenuScrolled } = this.props;
 
-        this.props.dispatch(SET_SCROLL_POS(scrollTop));
+        // this.props.dispatch(SET_SCROLL_POS(scrollTop));
         if (scrollTop === 0) this.props.dispatch(RESET_MENU());
         else if (!MenuScrolled) this.props.dispatch(SET_MENU_SCROLLED());
     };

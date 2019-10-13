@@ -1,7 +1,52 @@
-.Footer
+footer
     display: flex
     position: relative
     width: 100%
     height: 400px
     align-items: flex-end
-    background: $secondaryColor
+    background: $secondary_color
+    color: $color_light_text
+    align-items: center
+    padding: $desktop_padding
+    .footer_wrap
+        position: relative
+        display: flex
+        justify-content: row
+        align-items: center
+        padding-bottom: 60px
+        .ContactsBlock
+            position: relative
+            white-space: nowrap
+            height: 100%
+            padding-right: 15vw
+            .contacts_adress
+                padding-bottom: 10px
+            .contacts_email, .contacts_phones
+                opacity: .5
+                padding-bottom: 10px
+            .social_links
+                height: 50px
+                img 
+                    padding-right: 20px
+                    max-height: 30px
+        .SiteMap
+            position: relative
+            white-space: nowrap
+            height: 100%
+            padding-right: 3vw
+            .site_map_header
+                padding-bottom: 10px
+            .site_map_links
+                opacity: .5
+    .footer_credits
+        display: flex
+        flex-direction: row
+        .credits_name
+            opacity: .6
+        .credits_info
+            opacity: .4
+        .credits_design
+            opacity: .4
+            padding-left: 350px
+        .credits_designer
+            opacity: .6

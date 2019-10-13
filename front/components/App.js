@@ -9,9 +9,12 @@ import {
 } from '../redux/actions/actions';
 import Scroller from './Helpers/Scroller';
 import Markup from './Markup';
+import { AppContext } from '../contexts/contexts';
+import Loader from './Helpers/Loader/Loader';
 
 class App extends Component {
     componentDidMount() {
+        dict.translate(this.props.lang);
         const isMobile = window.screen.width < 600;
         if (isMobile) console.log('[VERSION] MOBILE');
         else console.log('[VERSION] DESKTOP');
@@ -20,13 +23,17 @@ class App extends Component {
                 this.props.dispatch(OPEN({ isMobile }));
             }, 1000);
         };
+        console.log('done');
     }
     render() {
-        // const { dict } = this.props;
+        const { lang, loading } = this.props;
         return (
             <div className='AppContainer'>
                 <Scroller>
-                    <Markup />
+                    <AppContext.Provider value={ { lang } }>
+                        { loading && <Loader /> }
+                        <Markup />
+                    </AppContext.Provider>
                 </Scroller>
             </div>
         );
@@ -34,12 +41,15 @@ class App extends Component {
 }
 App.propTypes = {
     dispatch: PropTypes.func.isRequired,
+    lang: PropTypes.string.isRequired,
+    loading: PropTypes.bool.isRequired,
     // dict: PropTypes.object.isRequired,
 };
 
 function select(store) {
     return {
-        // lang: store.viewReducer.lang,
+        loading: store.viewReducer.loading,
+        lang: store.viewReducer.userParams.lang,
         dict: store.viewReducer.dict,
     };
 }

@@ -1,4 +1,10 @@
 export default {
+    'common': {
+        'en': 'English',
+        'ru': 'Русский',
+        'ua': 'Українська',
+        'loading': 'Зачекайте, будь ласка.',
+    },
     'modules': {
         'main': 'Головна',
         'legal_services': 'Послуги для юридичних осіб',

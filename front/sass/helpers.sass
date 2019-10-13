@@ -70,3 +70,54 @@
             opacity: .8
             transition: all .3s ease
             cursor: grab
+
+.Loader
+    width: 100%
+    height: 100%
+    position: fixed
+    z-index: 999
+    background: $colorLight
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    .loaderLogo
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        div
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: 60px
+            font-weight: 400
+            line-height: 60px
+            padding-top: 5px
+            opacity: 0
+            &.aboved
+                z-index: 2
+        .loaderI
+            width: 100px
+            height: 100px
+            border-radius: 50px
+            background-color: $defaultColor
+            border: 12px solid $primaryColor
+            box-shadow: $shadow10
+            margin-right: -100px
+            z-index: 1
+            color: $primaryColor
+        .loaderV
+            width: 100px
+            height: 100px
+            border-radius: 50px
+            background-color: $primaryColor
+            box-shadow: $shadow10
+            z-index: 1
+            color: $defaultColor
+
+    .loading_text
+        position: absolute
+        bottom: 100px
+        opacity: 0
+

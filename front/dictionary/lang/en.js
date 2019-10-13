@@ -1,4 +1,10 @@
 export default {
+    'common': {
+        'en': 'English',
+        'ru': 'Русский',
+        'ua': 'Українська',
+        'loading': 'Loading...',
+    },
     'modules': {
         'main': 'Home',
         'legal_services': 'Legal Services',

@@ -17,7 +17,7 @@ export const theme = createMuiTheme({
             // '"Poiret One"',
             // '"Comfortaa"',
         ].join(','),
-        fontSize: 17,
+        fontSize: 14,
         fontWeight: 100,
     },
     palette: {

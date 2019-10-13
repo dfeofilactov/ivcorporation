@@ -101,6 +101,7 @@ module.exports = {
             _: 'lodash',
             React: 'react',
             ReactDOM: 'react-dom',
+            dict: [path.resolve(__dirname, '../front/dictionary/dict.js'), 'default'],
         }),
         new webpack.DefinePlugin({
             // 'process.env.NODE_ENV': JSON.stringify('PRODUCTION'),
