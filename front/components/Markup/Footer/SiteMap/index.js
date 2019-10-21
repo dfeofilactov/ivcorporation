@@ -8,7 +8,6 @@ import ServiceBlock from './ServicesBlock';
 
 class SiteMap extends Component {
     render() {
-        console.log(dict);
         return (
             <div className='SiteMap'>
                 {

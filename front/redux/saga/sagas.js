@@ -1,7 +1,7 @@
 import {
     // call,
     put,
-    delay,
+    // delay,
     //
 } from 'redux-saga/effects';
 import * as ActionTypes from '../../consts/actionTypes';
@@ -9,13 +9,24 @@ import {
     // SHOW_SNACKBAR,
     SHOW_LOADER,
     CLOSE_LOADER,
+    SET_LANG,
+    OPEN_MAIN,
+    OPEN_PAGE,
 } from '../actions/actions';
+import ServicesDescription from '../../description/services';
 
 const sagas = {
-    * [ActionTypes.CHANGE_LANG](lang) {
+    * [ActionTypes.OPEN](action) {
+        const openedPage = document.location.pathname.slice(1);
+        if (openedPage) {
+            const page = _.find(ServicesDescription, (item) => item.name === openedPage);
+            console.log(page);
+            yield put(OPEN_PAGE(page));
+        } else yield put(OPEN_MAIN(action.params));
+    },
+    * [ActionTypes.CHANGE_LANG](action) {
         yield put(SHOW_LOADER());
-        yield put(ActionTypes.SET_LANG(lang));
-        yield delay(2000);
+        yield put(SET_LANG(action.lang));
         yield put(CLOSE_LOADER());
     },
 };

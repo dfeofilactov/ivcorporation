@@ -1,5 +1,6 @@
 export const RESET_APP = 'RESET_APP';
 export const OPEN = 'OPEN';
+export const OPEN_MAIN = 'OPEN_MAIN';
 
 export const SET_LANG = 'SET_LANG';
 export const CHANGE_LANG = 'CHANGE_LANG';

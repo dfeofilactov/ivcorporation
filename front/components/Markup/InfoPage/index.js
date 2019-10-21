@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Footer from '../Footer';
 // import classnames from 'classnames';
 class InfoPage extends Component {
     render() {
+        const { page } = this.props;
         return (
             <div className='InfoPage'>
                 <div>
@@ -13,10 +14,10 @@ class InfoPage extends Component {
                     </div>
                     <div className='info_text'>
                         <div className='info_header'>
-                            Господарські спори
+                            { page.caption }
                         </div>
                         <div className='info_content'>
-                            fjdsnknfd
+                            { page.text }
                         </div>
                     </div>
                 </div>
@@ -27,15 +28,19 @@ class InfoPage extends Component {
 }
 
 InfoPage.propTypes = {
-
+    page: PropTypes.object.isRequired,
+    //
 };
 
 //InfoPage.defaultProps = {
 //
 //};
 
-function select(/* store */) {
-    return { };
+function select(store) {
+    return {
+        page: store.viewReducer.page,
+        //
+    };
 }
 
 export default connect(select)(InfoPage);

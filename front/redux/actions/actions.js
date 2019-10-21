@@ -9,6 +9,12 @@ export const OPEN = (params) => {
         params,
     };
 };
+export const OPEN_MAIN = (params) => {
+    return {
+        type: ActionTypes.OPEN_MAIN,
+        params,
+    };
+};
 export const SHOW_LOADER = () => {
     return { type: ActionTypes.SHOW_LOADER };
 };
@@ -42,8 +48,11 @@ export const SET_MENU_SCROLLED = () => {
 export const RESET_MENU = () => {
     return { type: ActionTypes.RESET_MENU };
 };
-export const OPEN_PAGE = () => {
-    return { type: ActionTypes.OPEN_PAGE };
+export const OPEN_PAGE = (page) => {
+    return {
+        type: ActionTypes.OPEN_PAGE,
+        page,
+    };
 };
 export const SET_SCROLL_POS = (pos) => {
     return {

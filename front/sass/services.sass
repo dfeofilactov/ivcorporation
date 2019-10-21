@@ -5,7 +5,7 @@
     z-index: 1
     .Headline
         height: 200px
-        background-color: darken($colorLight, 8)
+        background: linear-gradient(to left, darken($colorLight, 2), darken($colorLight, 8))
         color: $colorDarkText
         align-items: center
         .TextHeadline
@@ -52,9 +52,10 @@
                     height: $service_mobile_height
                 display: flex
                 width: 100%
-                height: 150px
+                height: 160px
                 background-color: $colorLight
                 color: $colorDarkText
+                box-shadow: $shadow
                 .ServiceImage
                     @media #{$media-phones}
                         height: $service_mobile_height
@@ -62,23 +63,25 @@
                     display: flex
                     justify-content: center
                     align-items: center
-                    min-width: 150px
-                    max-width: 150px
-                    height: 150px
+                    min-width: 160px
+                    max-width: 160px
+                    height: 160px
                     background: rgb(150, 150, 150)
                     img
                         width: 100%
                         height: 100%
                         object-fit: cover
                 .ServiceInfo
+                    position: relative
                     display: flex
-                    justify-content: center
+                    justify-content: flex-start
                     // align-items: center
                     flex-direction: column
                     height: 100%
-                    padding: 0 20px
+                    padding: 20px
                     .ServiceName
-                        font-size: 20px
+                        font-size: 16px
+                        line-height: 18px
                         margin-bottom: 10px
                     .ServiceText
                         @media #{$media-normal}
@@ -88,9 +91,12 @@
                         line-height: 18px
                         opacity: .3
                         margin-bottom: 10px
+                    .ServiceBtn
+                        position: absolute
+                        bottom: 20px
 .dark
     .Headline
-        background-color: $colorDark
+        background: linear-gradient(to left, lighten($colorDark, 2), lighten($colorDark, 8))
         color: $color_light_text
     .LinksContainer
         background-color: lighten($colorDark, 2)

@@ -18,7 +18,6 @@ class Scroller extends Component {
     componentDidUpdate(prevProps) {
         const { pos } = this.props;
         if (prevProps.pos !== pos) {
-            console.log('we need to scroll');
             this.Scroller.scrollTop(pos);
         }
     }

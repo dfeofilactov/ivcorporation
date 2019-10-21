@@ -15,14 +15,14 @@ class Additional extends Component {
                     <Icon fontSize='inherit' color='secondary'>{ data.icon }</Icon>
                 </div>
                 <div className='AdditionalCaption'>{ data.caption }</div>
-                <Link className='additional_link' to={ `/services/${ data.name }` }>
+                <Link className='additional_link' to={ `/${ data.name }` }>
                     <Button
                         className='MoreBtn'
                         color='primary'
                         variant='contained'
                         size='small'
                         classes={ { label: 'BtnLabel' } }
-                        onClick={ () => { this.props.dispatch(OPEN_PAGE()); } }
+                        onClick={ () => { this.props.dispatch(OPEN_PAGE(data)); } }
                     >
                     Подробнее
                     </Button>

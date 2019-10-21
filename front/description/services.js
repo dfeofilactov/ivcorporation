@@ -2,31 +2,100 @@ import {
     LEGAL_SERVICES, INDIVIDUAL_SERVICES, ADDITION_SERVICES,
     //
 } from '../consts/generalConsts';
+import images from './images';
+import { DISPUTS_SERVICES, TAX_SERVICES, BUSINESS_SERVICES, WORK_SERVICES, ECO_SERVICES, CUSTOMS_SERVICES, BANK_SERVICES, EMPLOY_SERVICES, INSURANCE_SERVICES, SOIL_SERVICES, LEGACY_SERVICES, HOME_SERVICES, HUMAN_SERVICES } from '../consts/servicesNames';
 
 const ServicesDescription = {
     [LEGAL_SERVICES]: {
+        caption: 'modules.legal',
         services: [
             {
-                name: 'test',
-                text: 'Лондон является столицей Великобританией. А мы являемся лучшими юристами и адвокатами в Украине',
-                info: 'Лондон является столицей Великобританией. А мы являемся лучшими юристами и адвокатами в Украине',
-                caption: 'caption',
-                image: 'https://rijelq.db.files.1drv.com/y4mjRNbn1PHxxsQ_xmQQd6ngsP8kiv9gDGe20CioRIO-imDj_t7SG6c2v9n4Iojccyr3zAVrwXi_IKpx6sTT8ZZCR90fVjf_8B8EdVW3ns3xZnSAmTNndAGm8HJE5CTiZx08y_bchwGOdPbBJOhXYIr-atq9lAvi8wEbhvyjkRuFr5jv99-etMT60Ig6zv_JqK8B33RFt2apBlNUmDpRZ3sFA?width=1440&height=702&cropmode=none',
+                name: CUSTOMS_SERVICES,
+                text: 'texts.legal.customs',
+                caption: 'legal.customs',
+                image: images.get(CUSTOMS_SERVICES),
+            },
+            {
+                name: ECO_SERVICES,
+                text: 'texts.legal.eco',
+                caption: 'legal.eco',
+                image: images.get(ECO_SERVICES),
+            },
+            {
+                name: WORK_SERVICES,
+                text: 'texts.legal.work',
+                caption: 'legal.work',
+                image: images.get(WORK_SERVICES),
+            },
+            {
+                name: BUSINESS_SERVICES,
+                text: 'texts.legal.business',
+                caption: 'legal.business',
+                image: images.get(BUSINESS_SERVICES),
+            },
+            {
+                name: TAX_SERVICES,
+                text: 'texts.legal.tax',
+                caption: 'legal.tax',
+                image: images.get(TAX_SERVICES),
+            },
+            {
+                name: DISPUTS_SERVICES,
+                text: 'texts.legal.disputs',
+                caption: 'legal.disputs',
+                image: images.get(DISPUTS_SERVICES),
             },
         ],
     },
     [INDIVIDUAL_SERVICES]: {
+        caption: 'modules.individual',
         services: [
             {
-                name: 'test',
-                text: 'Лондон является столицей Великобританией. А мы являемся лучшими юристами и адвокатами в Украине',
-                info: 'Лондон является столицей Великобританией. А мы являемся лучшими юристами и адвокатами в Украине',
-                caption: 'caption',
-                image: 'https://rijelq.db.files.1drv.com/y4mjRNbn1PHxxsQ_xmQQd6ngsP8kiv9gDGe20CioRIO-imDj_t7SG6c2v9n4Iojccyr3zAVrwXi_IKpx6sTT8ZZCR90fVjf_8B8EdVW3ns3xZnSAmTNndAGm8HJE5CTiZx08y_bchwGOdPbBJOhXYIr-atq9lAvi8wEbhvyjkRuFr5jv99-etMT60Ig6zv_JqK8B33RFt2apBlNUmDpRZ3sFA?width=1440&height=702&cropmode=none',
+                name: BANK_SERVICES,
+                text: 'texts.individual.bank',
+                caption: 'individual.bank',
+                image: images.get(BANK_SERVICES),
+            },
+            {
+                name: EMPLOY_SERVICES,
+                text: 'texts.individual.employ',
+                caption: 'individual.employ',
+                image: images.get(EMPLOY_SERVICES),
+            },
+            {
+                name: INSURANCE_SERVICES,
+                text: 'texts.individual.insurance',
+                caption: 'individual.insurance',
+                image: images.get(INSURANCE_SERVICES),
+            },
+            {
+                name: SOIL_SERVICES,
+                text: 'texts.individual.soil',
+                caption: 'individual.soil',
+                image: images.get(SOIL_SERVICES),
+            },
+            {
+                name: LEGACY_SERVICES,
+                text: 'texts.individual.legacy',
+                caption: 'individual.legacy',
+                image: images.get(LEGACY_SERVICES),
+            },
+            {
+                name: HOME_SERVICES,
+                text: 'texts.individual.home',
+                caption: 'individual.home',
+                image: images.get(HOME_SERVICES),
+            },
+            {
+                name: HUMAN_SERVICES,
+                text: 'texts.individual.human',
+                caption: 'individual.human',
+                image: images.get(HUMAN_SERVICES),
             },
         ],
     },
     [ADDITION_SERVICES]: {
+        caption: 'modules.additional',
         services: [
             {
                 name: 'test',

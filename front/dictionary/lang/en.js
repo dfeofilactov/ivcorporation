@@ -7,9 +7,9 @@ export default {
     },
     'modules': {
         'main': 'Home',
-        'legal_services': 'Legal Services',
-        'individual_services': 'Individual Services',
-        'addition_services': 'Addition Services',
+        'legal': 'Legal Services',
+        'individual': 'Individual Services',
+        'additional': 'Addition Services',
         'contacts': 'Contacts',
         'about': 'About',
     },
@@ -23,16 +23,46 @@ export default {
         'services': 'Services',
         'contacts': 'Contacts',
     },
-    'legal_services': {
+    'legal': {
+        'slogan': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
+        'customs': 'Customs',
+        'eco': 'Ecology',
+        'work': 'Work',
+        'business': 'Admin',
+        'tax': 'Household',
+        'disputs': 'Abonent',
+        //
+    },
+    'individual': {
+        'slogan': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
+        'bank': 'Bank',
+        'employ': 'Employ',
+        'insurance': 'Insurance',
+        'soil': 'Soil',
+        'legacy': 'Legacy',
+        'home': 'Home',
+        'human': 'Human',
+    },
+    'additional': {
         'slogan': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
         //
     },
-    'individual_services': {
-        'slogan': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
-        //
-    },
-    'addition_services': {
-        'slogan': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
-        //
+    'texts': {
+        'legal': {
+            'customs': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
+            'eco': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
+            'work': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
+            'business': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
+            'tax': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
+            'disputs': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
+        },
+        'individual': {
+            'customs': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
+            'eco': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
+            'work': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
+            'admin': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
+            'household': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
+            'abonent': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
+        },
     },
 };

@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 import {
-    OPEN, CLOSE_LOADER,
+    CLOSE_LOADER, OPEN,
     //
 } from '../redux/actions/actions';
 import Scroller from './Helpers/Scroller';
@@ -22,15 +22,14 @@ class App extends Component {
             this.props.dispatch(OPEN({ isMobile }));
             this.props.dispatch(CLOSE_LOADER());
         };
-        console.log('done');
     }
     render() {
-        const { lang, loading } = this.props;
+        const { lang } = this.props;
         return (
             <div className='AppContainer'>
                 <Scroller>
                     <AppContext.Provider value={ { lang } }>
-                        { loading && <Loader /> }
+                        <Loader />
                         <Markup />
                     </AppContext.Provider>
                 </Scroller>
@@ -41,7 +40,7 @@ class App extends Component {
 App.propTypes = {
     dispatch: PropTypes.func.isRequired,
     lang: PropTypes.string.isRequired,
-    loading: PropTypes.bool.isRequired,
+    // loading: PropTypes.bool.isRequired,
     // dict: PropTypes.object.isRequired,
 };
 

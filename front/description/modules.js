@@ -24,8 +24,8 @@ const Modules = [
         serviceType: SERVICE_TYPE_GENERAL,
         path: '',
         icon: 'home',
-        caption: 'modules.legal_services',
-        slogan: 'legal_services.slogan',
+        caption: 'modules.legal',
+        slogan: 'legal.slogan',
         isDark: true,
     },
     {
@@ -34,8 +34,8 @@ const Modules = [
         serviceType: SERVICE_TYPE_GENERAL,
         path: '',
         icon: 'home',
-        caption: 'modules.individual_services',
-        slogan: 'individual_services.slogan',
+        caption: 'modules.individual',
+        slogan: 'individual.slogan',
         isDark: false,
     },
     {
@@ -44,8 +44,8 @@ const Modules = [
         serviceType: SERVICE_TYPE_ADDITIONAL,
         path: '',
         icon: 'home',
-        caption: 'modules.addition_services',
-        slogan: 'addition_services.slogan',
+        caption: 'modules.additional',
+        slogan: 'additional.slogan',
     },
     {
         name: CONTACTS,

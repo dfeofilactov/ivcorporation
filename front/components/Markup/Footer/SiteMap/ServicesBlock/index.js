@@ -29,7 +29,7 @@ const ServiceBlock = ({ caption, services }) => {
 
 ServiceBlock.propTypes = {
     caption: PropTypes.string.isRequired,
-    services: PropTypes.object.isRequired,
+    services: PropTypes.array.isRequired,
     //
 };
 

@@ -22,6 +22,7 @@ const initialState = Immutable({
     ScrollPos: 0,
     loading: true,
     mobileVersion: false,
+    page: {},
     dict: getDict(LANG_UA),
 });
 
@@ -29,7 +30,7 @@ const viewReducer = createReducer(initialState, {
     [ActionTypes.RESET_APP]() {
         return initialState;
     },
-    [ActionTypes.OPEN](state, action) {
+    [ActionTypes.OPEN_MAIN](state, action) {
         return state.merge({
             //
             mobileVersion: action.params.isMobile,
@@ -59,8 +60,11 @@ const viewReducer = createReducer(initialState, {
     [ActionTypes.RESET_MENU](state) {
         return state.merge({ MenuScrolled: false });
     },
-    [ActionTypes.OPEN_PAGE](state) {
-        return state.merge({ ScrollPos: 0 });
+    [ActionTypes.OPEN_PAGE](state, action) {
+        return state.merge({
+            ScrollPos: 0,
+            page: action.page,
+        });
     },
     [ActionTypes.SET_SCROLL_POS](state, action) {
         return state.merge({ ScrollPos: action.pos });

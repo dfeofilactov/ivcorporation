@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
 import anime from 'animejs';
+import { Fade } from '@material-ui/core';
 import { AppContext } from '../../../contexts/contexts';
 // import LogoSVG from '../Logo/LogoSVG';
 
@@ -71,34 +72,37 @@ class Loader extends Component {
         if (this.i % 2 === 1) this.setState({ aboved: this.state.aboved === 'i' ? 'v' : 'i' });
     }
     render() {
+        const { loading } = this.props;
         const { aboved } = this.state;
         const { lang } = this.context;
         return (
-            <div
-                id='loader_container'
-                className='Loader'
-                onWheel={ e => e.preventDefault() }
-                // className={ classnames('loader', { 'loader_start': this.props.loading }) }
-            >
-                <div className='loaderLogo' id='loader'>
-                    <div className={ classnames('loaderI', { 'aboved': aboved === 'i' }) } id='letter_i'>I</div>
-                    <div className={ classnames('loaderV', { 'aboved': aboved === 'v' }) } id='letter_v'>V</div>
-                </div>
+            <Fade in={ loading }>
                 <div
-                    ref={ el => this.loadingText = el }
-                    className='loading_text'
+                    id='loader_container'
+                    className='Loader'
+                    onWheel={ e => e.preventDefault() }
+                // className={ classnames('loader', { 'loader_start': this.props.loading }) }
                 >
-                    { dict.translate('common.loading', lang) }
+                    <div className='loaderLogo' id='loader'>
+                        <div className={ classnames('loaderI', { 'aboved': aboved === 'i' }) } id='letter_i'>I</div>
+                        <div className={ classnames('loaderV', { 'aboved': aboved === 'v' }) } id='letter_v'>V</div>
+                    </div>
+                    <div
+                        ref={ el => this.loadingText = el }
+                        className='loading_text'
+                    >
+                        {dict.translate('common.loading', lang)}
+                    </div>
                 </div>
-            </div>
+            </Fade>
         );
     }
 }
 
-// Loader.propTypes = {
-//     loading: PropTypes.bool.isRequired,
-//     //
-// };
+Loader.propTypes = {
+    loading: PropTypes.bool.isRequired,
+    //
+};
 
 Loader.contextType = AppContext;
 
