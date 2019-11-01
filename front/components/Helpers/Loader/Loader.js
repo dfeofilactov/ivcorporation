@@ -31,7 +31,7 @@ class Loader extends Component {
             complete: () => {
                 anime({
                     targets: letterI,
-                    translateX: '-55px',
+                    translateX: '-15px',
                     duration,
                     direction: 'alternate',
                     loop: true,
@@ -49,7 +49,7 @@ class Loader extends Component {
             complete: () => {
                 anime({
                     targets: letterV,
-                    translateX: '55px',
+                    translateX: '15px',
                     duration,
                     direction: 'alternate',
                     loop: true,
