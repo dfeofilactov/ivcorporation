@@ -13,10 +13,8 @@ class Footer extends Component {
                     <SiteMap />
                 </div>
                 <div className='footer_credits'>
-                    <div className='credits_name'>Інна Василівська.&nbsp;</div>
-                    <div className='credits_info'>Адвокат. Всі права захищено. Україна, Київ, 2019.</div>
-                    <div className='credits_design'>Designed by &nbsp;</div>
-                    <div className='credits_designer'>Denis Feofilaktov</div>
+                    <div className='credits_name'>Інна Василівська. Адвокат. Всі права захищено. Україна, Київ, 2019.</div>
+                    <div className='credits_design'>Designed by Denis Feofilaktov</div>
                 </div>
             </footer>
         );

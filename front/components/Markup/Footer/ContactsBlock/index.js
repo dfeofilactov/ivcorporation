@@ -7,7 +7,9 @@ class ContactsBLock extends Component {
     render() {
         return (
             <div className='ContactsBlock'>
-                <LogoType />
+                <div className='contacts_logo'>
+                    <LogoType />
+                </div>
                 <div className='contacts_adress'>Україна, м.Київ</div>
                 <div className='contacts_email'>vasylivska.inna@gmail.com</div>
                 <div className='contacts_phones'>
