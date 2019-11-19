@@ -7,9 +7,6 @@ import { IMG_GREETINGS_URL } from '../../../../consts/generalConsts';
 
 // import classnames from 'classnames';
 class Greetings extends Component {
-    // componentDidMount() {
-    //     RGBaster
-    // }
     render() {
         const { dict } = this.props;
         return (

@@ -54,9 +54,16 @@ export const OPEN_PAGE = (page) => {
         page,
     };
 };
-export const SET_SCROLL_POS = (pos) => {
+export const SET_SCROLL_POS = (name, pos) => {
     return {
         type: ActionTypes.SET_SCROLL_POS,
+        name,
         pos,
+    };
+};
+export const SET_MENU_DARK = (value) => {
+    return {
+        type: ActionTypes.SET_MENU_DARK,
+        value,
     };
 };

@@ -7,7 +7,7 @@
     height: 120px
     padding: $desktop_padding
     display: flex
-    color: $colorDarkText
+    color: inherit
     flex-direction: row
     align-items: center
     justify-content: space-between
@@ -25,7 +25,6 @@
             display: flex
             align-items: center
             flex-direction: row
-            .menu_board
 
         .menu_item
             display: flex
@@ -36,7 +35,7 @@
             font-weight: 300
             opacity: .6
             transition: all .4s ease
-            color: $secondary_color
+            color: inherit
             &:hover
                 opacity: 1
                 cursor: pointer
@@ -45,7 +44,7 @@
         .language_container
             .language_btn
                 opacity: 1
-                color: $secondary_color
+                color: inherit
             .language_board
                 position: absolute
                 display: flex
@@ -85,11 +84,11 @@
         line-height: 50px
         height: 50px !important
     .menu_board_paper
-        background-color: transparentize($colorDark, .4) !important
+        // background-color: transparentize($colorDark, .4) !important
         // backdrop-filter: blur(10px)
         // -webkikt-backdrop-filter: blur(10px)
         position: absolute
-        transform: translateX(-100px)
+        // transform: translateX(-100px)
         box-shadow: $shadow20
         .elements_container
             display: flex

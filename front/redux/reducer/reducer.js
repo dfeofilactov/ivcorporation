@@ -24,6 +24,8 @@ const initialState = Immutable({
     mobileVersion: false,
     page: {},
     dict: getDict(LANG_UA),
+    scrollPoints: { top: { isDark: false, top: 0 } },
+    isMenuDark: false,
 });
 
 const viewReducer = createReducer(initialState, {
@@ -67,7 +69,21 @@ const viewReducer = createReducer(initialState, {
         });
     },
     [ActionTypes.SET_SCROLL_POS](state, action) {
-        return state.merge({ ScrollPos: action.pos });
+        const { name, pos } = action;
+        if (pos !== state.scrollPoints[name]) {
+            const newPoints = _.cloneDeep(state.scrollPoints);
+            newPoints[name] = pos;
+            console.log(newPoints);
+            return state.merge({ scrollPoints: newPoints });
+        }
+        return null;
+    },
+    [ActionTypes.SET_MENU_DARK](state, action) {
+        const { value } = action;
+        if (value !== state.isMenuDark) {
+            return state.merge({ isMenuDark: value });
+        }
+        return null;
     },
 });
 

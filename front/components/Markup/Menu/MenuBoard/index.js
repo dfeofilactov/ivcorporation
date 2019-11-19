@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
-    Paper, Fade,
+    Paper, Fade, MenuItem,
     //
 } from '@material-ui/core';
 import classnames from 'classnames';
 
-import BoardElement from './BoardElement';
+// import BoardElement from './BoardElement';
 
 class MenuBoard extends Component {
     constructor(props) {
@@ -36,7 +36,7 @@ class MenuBoard extends Component {
                 </div>
                 <Fade in={ this.state.open } timeout={ 0.6 }>
                     <Paper className='menu_board_paper'>
-                        <div className='elements_container'>
+                        {/* <div className='elements_container'>
                             {
                                 _.map(item.services, (element, i) => (
                                     <BoardElement
@@ -45,7 +45,12 @@ class MenuBoard extends Component {
                                     />
                                 ))
                             }
-                        </div>
+                        </div> */}
+                        {
+                            _.map(item.services, (element, i) => (
+                                <MenuItem dense key={ i }>{element.caption}</MenuItem>
+                            ))
+                        }
                     </Paper>
                 </Fade>
             </div>

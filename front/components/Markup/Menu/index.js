@@ -12,9 +12,9 @@ import MenuBoard from './MenuBoard';
 
 class Menu extends Component {
     render() {
-        const { scrolled, selected } = this.props;
+        const { scrolled, selected, isMenuDark } = this.props;
         return (
-            <div className={ classnames('Menu', { 'scrolled': scrolled, 'dark': false }) }>
+            <div className={ classnames('Menu', { 'scrolled': scrolled, 'dark': isMenuDark }) }>
                 <LogoType />
                 <div className='menu_item_container'>
                     <div className='menu_services'>
@@ -50,6 +50,7 @@ class Menu extends Component {
 Menu.propTypes = {
     scrolled: PropTypes.bool.isRequired,
     selected: PropTypes.number.isRequired,
+    isMenuDark: PropTypes.bool.isRequired,
     //
 };
 
@@ -61,6 +62,7 @@ function select(store) {
     return {
         scrolled: store.viewReducer.MenuScrolled,
         selected: store.viewReducer.MenuSelectedIndex,
+        isMenuDark: store.viewReducer.isMenuDark,
         //
     };
 }

@@ -8,7 +8,7 @@ const pcckageConfig = require('../package.json');
 
 module.exports = {
     entry: path.resolve(__dirname, '../front', 'index.js'),
-    devtool: 'inline-source-map',
+    devtool: 'cheap-module-source-map',
     mode: 'development',
     devServer: {
         // before(app) {

@@ -8,6 +8,7 @@ import General from './General';
 import Additional from './Additional';
 import { SERVICE_TYPE_GENERAL, SERVICE_TYPE_ADDITIONAL, IMG_ADDITIONAL_BGR_URL } from '../../../../consts/generalConsts';
 import ServicesDescription from '../../../../description/services';
+import { SET_SCROLL_POS } from '../../../../redux/actions/actions';
 
 class Services extends Component {
     constructor(props) {
@@ -15,6 +16,15 @@ class Services extends Component {
 
         this.renderGeneral = ::this.renderGeneral;
         this.renderAdditional = ::this.renderAdditional;
+    }
+    componentDidMount() {
+        const { data: { name, isDark } } = this.props;
+        if (this.container) {
+            this.props.dispatch(SET_SCROLL_POS(name, {
+                isDark,
+                top: this.container.getBoundingClientRect().top,
+            }));
+        }
     }
     render() {
         const { data } = this.props;
@@ -29,7 +39,7 @@ class Services extends Component {
     renderGeneral(services) {
         const { data } = this.props;
         return (
-            <div className={ classnames('ServicesGeneral', { 'dark': data.isDark }) }>
+            <div ref={ e => this.container = e } className={ classnames('ServicesGeneral', { 'dark': data.isDark }) }>
                 <Headline
                     caption={ data.caption }
                     slogan={ data.slogan }
@@ -53,7 +63,7 @@ class Services extends Component {
     renderAdditional(services) {
         const { data, dict } = this.props;
         return (
-            <div className='AdditionalContainer'>
+            <div ref={ e => this.container = e } className='AdditionalContainer'>
                 <img className='AdditionalBackgroundImg' src={ IMG_ADDITIONAL_BGR_URL } alt='backAdditional' />
                 <div className='AdditionalBackgroundFilter' />
                 <div className='AdditionalLabelContainer'>
@@ -79,6 +89,7 @@ class Services extends Component {
 Services.propTypes = {
     data: PropTypes.object.isRequired,
     dict: PropTypes.object.isRequired,
+    dispatch: PropTypes.func.isRequired,
     //
 };
 

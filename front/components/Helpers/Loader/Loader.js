@@ -20,7 +20,7 @@ class Loader extends Component {
         // const loaderContainer = document.getElementById('loader_container');
         const letterI = document.getElementById('letter_i');
         const letterV = document.getElementById('letter_v');
-        const duration = 400;
+        // const duration = 400;
         anime({
             targets: letterI,
             // translateY: '-100px',
@@ -28,16 +28,16 @@ class Loader extends Component {
             scale: '1.3',
             duration: 400,
             easing: 'easeInQuad',
-            complete: () => {
-                anime({
-                    targets: letterI,
-                    translateX: '-15px',
-                    duration,
-                    direction: 'alternate',
-                    loop: true,
-                    easing: 'easeInOutSine',
-                });
-            },
+            // complete: () => {
+            //     anime({
+            //         targets: letterI,
+            //         opacity: '0.5',
+            //         duration,
+            //         direction: 'alternate',
+            //         loop: true,
+            //         easing: 'easeInOutSine',
+            //     });
+            // },
         });
         anime({
             targets: letterV,
@@ -46,17 +46,17 @@ class Loader extends Component {
             scale: '1.3',
             duration: 400,
             easing: 'easeInQuad',
-            complete: () => {
-                anime({
-                    targets: letterV,
-                    translateX: '15px',
-                    duration,
-                    direction: 'alternate',
-                    loop: true,
-                    easing: 'easeInOutSine',
-                    loopComplete: this.setAbove,
-                });
-            },
+            // complete: () => {
+            //     anime({
+            //         targets: letterV,
+            //         opacity: '0.5',
+            //         duration,
+            //         direction: 'alternate',
+            //         loop: true,
+            //         easing: 'easeInOutSine',
+            //         // loopComplete: this.setAbove,
+            //     });
+            // },
         });
         anime({
             targets: this.loadingText,
