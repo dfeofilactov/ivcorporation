@@ -14,35 +14,37 @@ class Menu extends Component {
     render() {
         const { scrolled, selected, isMenuDark } = this.props;
         return (
-            <div className={ classnames('Menu', { 'scrolled': scrolled, 'dark': isMenuDark }) }>
-                <LogoType />
-                <div className='menu_item_container'>
-                    <div className='menu_services'>
-                        {
-                            _.map(MenuDescription, (item, key) => {
-                                if (item.menuType === MENU_TYPE_ELEMENT) {
+            <header className={ classnames({ 'scrolled': scrolled, 'dark': isMenuDark }) }>
+                <div className='Menu'>
+                    <LogoType />
+                    <div className='menu_item_container'>
+                        <div className='menu_services'>
+                            {
+                                _.map(MenuDescription, (item, key) => {
+                                    if (item.menuType === MENU_TYPE_ELEMENT) {
+                                        return (
+                                            <MenuItem
+                                                selected={ selected === key }
+                                                key={ key }
+                                                item={ item }
+                                            />
+                                        );
+                                    }
                                     return (
-                                        <MenuItem
+                                        <MenuBoard
                                             selected={ selected === key }
                                             key={ key }
                                             item={ item }
                                         />
                                     );
-                                }
-                                return (
-                                    <MenuBoard
-                                        selected={ selected === key }
-                                        key={ key }
-                                        item={ item }
-                                    />
-                                );
-                            })
-                        }
-                        <div className='divider' />
+                                })
+                            }
+                            <div className='divider' />
+                        </div>
+                        <Language />
                     </div>
-                    <Language />
                 </div>
-            </div>
+            </header>
         );
     }
 }

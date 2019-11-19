@@ -44,18 +44,20 @@ class Services extends Component {
                     caption={ data.caption }
                     slogan={ data.slogan }
                 />
-                <div className='LinksContainer'>
-                    {
-                        _.map(services, (item, key) => {
-                            return (
-                                <General
-                                    data={ item }
-                                    isDark={ data.isDark }
-                                    key={ key }
-                                />
-                            );
-                        })
-                    }
+                <div className='LinksContainerWrap'>
+                    <div className='LinksContainer'>
+                        {
+                            _.map(services, (item, key) => {
+                                return (
+                                    <General
+                                        data={ item }
+                                        isDark={ data.isDark }
+                                        key={ key }
+                                    />
+                                );
+                            })
+                        }
+                    </div>
                 </div>
             </div>
         );
