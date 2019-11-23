@@ -7,7 +7,7 @@ import {
     CLOSE_LOADER, OPEN,
     //
 } from '../redux/actions/actions';
-import Scroller from './Helpers/Scroller';
+// import Scroller from './Helpers/Scroller';
 import Markup from './Markup';
 import { AppContext } from '../contexts/contexts';
 import Loader from './Helpers/Loader/Loader';
@@ -27,12 +27,12 @@ class App extends Component {
         const { lang } = this.props;
         return (
             <div className='AppContainer'>
-                <Scroller>
-                    <AppContext.Provider value={ { lang } }>
-                        <Loader />
-                        <Markup />
-                    </AppContext.Provider>
-                </Scroller>
+                {/* <Scroller> */}
+                <AppContext.Provider value={ { lang } }>
+                    <Loader />
+                    <Markup />
+                </AppContext.Provider>
+                {/* </Scroller> */}
             </div>
         );
     }
