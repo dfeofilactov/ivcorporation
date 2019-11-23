@@ -14,9 +14,13 @@ const logger = createLogger({
     //
 });
 
+console.log(process.env.NODE_ENV === 'PRODUCTION');
+
 const store = createStore(
     reducer,
-    applyMiddleware(logger, sagaMiddleware)
+    process.env.NODE_ENV === 'PRODUCTION' ?
+        applyMiddleware(sagaMiddleware) :
+        applyMiddleware(logger, sagaMiddleware)
 );
 
 sagaMiddleware.run(rootSaga);
