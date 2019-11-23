@@ -16,7 +16,7 @@ export default {
     'Greetings': {
         'LegalServiceText': 'Услуги юриста',
         'Slogan': 'Лондон является столицей Великобритании. А мы являемся лучшими юристами и адвокатами в Украине.',
-        // empty line
+        'scrolldown': 'scroll down',
     },
     'menu': {
         'main': 'Home',

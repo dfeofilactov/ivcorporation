@@ -24,8 +24,8 @@ const initialState = Immutable({
     mobileVersion: false,
     page: {},
     dict: getDict(LANG_UA),
-    scrollPoints: { top: { isDark: false, top: 0 } },
-    isMenuDark: false,
+    scrollPoints: { top: { isDark: true, top: 0 } },
+    isMenuDark: true,
 });
 
 const viewReducer = createReducer(initialState, {

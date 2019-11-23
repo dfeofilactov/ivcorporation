@@ -6,7 +6,7 @@ header
     justify-content: center
     width: 100%
     height: 120px
-    transition: background-color, height .4s ease
+    transition: all .6s ease
     .Menu
         @media #{$media-phones}
             // padding: $phones_padding
@@ -45,6 +45,7 @@ header
                 opacity: .6
                 color: inherit
                 transition: opacity .4s ease
+                text-shadow: $text_shadow
                 &:hover
                     opacity: 1
                     cursor: pointer
@@ -54,6 +55,7 @@ header
                 .language_btn
                     color: inherit
                     opacity: 1
+                    text-shadow: $text_shadow
                 .language_board
                     position: absolute
                     display: flex
@@ -76,6 +78,9 @@ header
     // filter: url('#ivBlurMenu')
     // -webkikt-filter: url('#ivBlurMenu')
     height: 80px
+.dark
+    background-color: transparentize($colorDark, .6)
+    color: $color_light_text
 .dark.scrolled
     background-color: transparentize($colorDark, .4)
     // backdrop-filter: blur(20px)

@@ -19,14 +19,17 @@ class Greetings extends Component {
                     />
                 </div>
                 <div className='Greetings'>
-                    <div className='hello_text'>
-                        <div className='legal_service_text'>
-                            { dict.translate('Greetings.LegalServiceText') }
-                        </div>
-                        <div className='slogan_text'>
-                            { dict.translate('Greetings.Slogan') }
+                    <div className='hello_text_container'>
+                        <div className='hello_text'>
+                            <div className='legal_service_text'>
+                                <div>{dict.translate('Greetings.LegalServiceText')}</div>
+                            </div>
+                            <div className='slogan_text'>
+                                {dict.translate('Greetings.Slogan')}
+                            </div>
                         </div>
                     </div>
+                    {/* <div className='scrolldown'>{dict.translate('Greetings.scrolldown')}</div> */}
                 </div>
             </>
         );

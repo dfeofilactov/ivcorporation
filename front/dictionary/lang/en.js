@@ -16,6 +16,7 @@ export default {
     'Greetings': {
         'LegalServiceText': 'Legal Services',
         'Slogan': 'London is the capital of Great Britain but we are the best Ukrainian lawyers.',
+        'scrolldown': 'scroll down',
         // empty line
     },
     'menu': {
